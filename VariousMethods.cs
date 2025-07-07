@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Homework_5._1
 {
-   public class VariousMethods
+   public class LibraryFor1DArray
    {
       public static int NumberArrayElements(string nameArray)
       {
