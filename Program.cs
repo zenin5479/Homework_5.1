@@ -1,5 +1,7 @@
 ﻿using System;
 
+// 
+
 namespace Homework_5._1
 {
    internal class Program
@@ -7,6 +9,7 @@ namespace Homework_5._1
       static void Main(string[] args)
       {
          Console.WriteLine("Hello World!");
+         Console.ReadKey();
       }
    }
 }
