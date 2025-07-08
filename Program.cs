@@ -21,12 +21,7 @@ namespace Homework_5._1
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
          string nameOne = "A";
-         string nameTwo = "B";
-         string nameThree = "C";
-
          int elementsOne = LibraryFor1DArray.NumberArrayElements(nameOne);
-         int elementsTwo = LibraryFor1DArray.NumberArrayElements(nameTwo);
-         int elementsThree = LibraryFor1DArray.NumberArrayElements(nameThree);
 
          string pathOne = Path.GetFullPath("a.txt");
          if (!File.Exists(pathOne))
