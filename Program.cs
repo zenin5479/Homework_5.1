@@ -16,6 +16,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
+         // Обновить методы для int
          string nameOne = "A";
          int elementsOne = LibraryFor1DArray.NumberArrayElements(nameOne);
 
