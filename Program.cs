@@ -35,7 +35,6 @@ namespace Homework_5._1
          {
             Console.WriteLine("Файл существует. Очищаем");
             // Очищаем содержимое файла
-            // Вариант 1
             File.Create(pathFour).Close();
          }
 
