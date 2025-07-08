@@ -16,10 +16,6 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-
-         // Переводит (,) в (.)
-         //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
-
          string nameOne = "A";
          int elementsOne = LibraryFor1DArray.NumberArrayElements(nameOne);
 
@@ -41,21 +37,6 @@ namespace Homework_5._1
             // Очищаем содержимое файла
             // Вариант 1
             File.Create(pathFour).Close();
-            // Вариант 2
-            //File.WriteAllLines(pathFour, new string[0]);
-            //File.WriteAllLines(pathFour, Array.Empty<string>());
-            // Вариант 3
-            //File.WriteAllText(pathFour, string.Empty);
-            // Вариант 4
-            //File.WriteAllBytes(pathFour, new byte[0]);
-            //File.WriteAllBytes(pathFour, Array.Empty<byte>());
-            // Вариант 5
-            //FileStream fileStream = new FileStream(pathFour, FileMode.Truncate);
-            //fileStream.Close();
-            // Вариант 6
-            //FileStream fileStream = new FileStream(pathFour, FileMode.Open);
-            //fileStream.SetLength(0);
-            //fileStream.Close();
          }
 
          double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne, nameOne);
