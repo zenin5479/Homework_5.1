@@ -29,17 +29,6 @@ namespace Homework_5._1
          string pathFour = Path.GetFullPath("finish.txt");
          File.Create(pathFour).Close();
 
-         if (!File.Exists(pathFour))
-         {
-            Console.WriteLine("Ошибка при открытии файла для чтения. Файл не существует");
-            File.Create(pathFour);
-         }
-         else
-         {
-            Console.WriteLine("Файл существует. Очищаем");
-
-         }
-
          double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne, nameOne);
          if (sourceOne.Length == 0)
          {
