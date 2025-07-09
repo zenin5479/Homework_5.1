@@ -16,7 +16,26 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         
+         string nameFileOne = "a.txt";
+         string nameFileTwo = "finish.txt";
+
+         int rowOne = LibraryFor1DArray.SizeRow();
+         int columnOne = LibraryFor1DArray.SizeColumn();
+         int multipleElement = LibraryFor1DArray.MultipleElement();
+
+         string pathOne = Path.GetFullPath(nameFileOne);
+         int[,] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne, nameFileOne);
+         if (sourceOne.GetLength(0) == 0)
+         {
+            Console.WriteLine("Файл {0} пуст", nameFileOne);
+         }
+         else
+         {
+            int[,] inputArray = LibraryFor1DArray.InputArrayInt(sourceOne, rowOne, columnOne);
+            string pathTwo = Path.GetFullPath(nameFileTwo);
+            File.Create(pathTwo).Close();
+            LibraryFor1DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
+         }
 
          Console.ReadKey();
       }
