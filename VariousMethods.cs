@@ -258,6 +258,27 @@ namespace Homework_5._1
          return outputArray;
       }
 
+      public static double FindMaxArray(double[] inputArray)
+      {
+         // Поиск максимального элемента строки (без флагов bool)
+         // Cчитаем, что максимум - это первый элемент строки
+         double max = inputArray[0];
+         int column = 0;
+         while (column < inputArray.Length)
+         {
+            if (max < inputArray[column])
+            {
+               max = inputArray[column];
+            }
+
+            column++;
+         }
+
+         Console.WriteLine("Максимум в массиве равен: {0}", max);
+         Console.WriteLine("Максимум в массиве равен: {0:f2}", max);
+         return max;
+      }
+
       public static double FindMaxArray(double[] inputArray, string nameArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
