@@ -16,7 +16,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         // Обновить методы для int
+         // Обновить методы для int !!!
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
 
          string pathOne = Path.GetFullPath("a.txt");
@@ -36,7 +36,7 @@ namespace Homework_5._1
          else
          {
             double[] searchOne = LibraryFor1DArray.InputArray(sourceOne, elementsOne);
-            double maxOne = LibraryFor1DArray.FindMaxArray(searchOne, nameOne);
+            double maxOne = LibraryFor1DArray.FindMaxArray(searchOne);
             double[] replacingOne = LibraryFor1DArray.ReplacingMax(searchOne, maxOne);
             string[] arrayOne = LibraryFor1DArray.VivodStringArray(replacingOne);
             LibraryFor1DArray.FileAppendString(arrayOne, pathFour);
