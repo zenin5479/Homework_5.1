@@ -28,7 +28,7 @@ namespace Homework_5._1
          string pathFour = Path.GetFullPath("finish.txt");
          File.Create(pathFour).Close();
 
-         double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne, nameOne);
+         double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne);
          if (sourceOne.Length == 0)
          {
             Console.WriteLine("Исходный строковый массив {0} пуст", nameOne);

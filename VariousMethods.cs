@@ -67,7 +67,7 @@ namespace Homework_5._1
             int сolumn = 0;
             if (stroka != null)
             {
-               Console.WriteLine("Исходный строковый массив {0}", nameArray);
+               Console.WriteLine("Исходный строковый массив:");
                Console.WriteLine(stroka);
                while (symbolСount < stroka.Length)
                {
@@ -87,7 +87,7 @@ namespace Homework_5._1
                //Console.WriteLine("Количество столбцов {0}", сolumn);
 
                // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-               Console.WriteLine("Массив вещественных чисел {0}", nameArray);
+               Console.WriteLine("Массив вещественных чисел:");
                // Одномерный массив вещественных чисел
                arrayDouble = new double[сolumn];
                // Построитель строк
