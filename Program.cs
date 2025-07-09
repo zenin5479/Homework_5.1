@@ -17,8 +17,8 @@ namespace Homework_5._1
       static void Main(string[] args)
       {
          // Обновить методы для int !!!
+         // Написать перегрузки методов без названия массива (nameArray)
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
-
          string pathOne = Path.GetFullPath("a.txt");
          if (!File.Exists(pathOne))
          {
