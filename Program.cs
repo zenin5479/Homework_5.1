@@ -35,7 +35,7 @@ namespace Homework_5._1
          }
          else
          {
-            double[] searchOne = LibraryFor1DArray.InputArray(sourceOne, elementsOne, nameOne);
+            double[] searchOne = LibraryFor1DArray.InputArray(sourceOne, elementsOne);
             double maxOne = LibraryFor1DArray.FindMaxArray(searchOne, nameOne);
             double[] replacingOne = LibraryFor1DArray.ReplacingMax(searchOne, maxOne);
             string[] arrayOne = LibraryFor1DArray.VivodStringArray(replacingOne);
