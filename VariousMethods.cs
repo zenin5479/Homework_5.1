@@ -28,7 +28,7 @@ namespace Homework_5._1
          int n;
          do
          {
-            Console.WriteLine("Введите количество элементов массива {0}", nameArray);
+            Console.WriteLine("Введите количество элементов массива {0}:", nameArray);
             int.TryParse(Console.ReadLine(), out n);
             //n = Convert.ToInt32(Console.ReadLine());
             if (n <= 0 || n > 20)
