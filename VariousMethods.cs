@@ -6,6 +6,23 @@ namespace Homework_5._1
 {
    public class LibraryFor1DArray
    {
+      public static int NumberArrayElements()
+      {
+         int n;
+         do
+         {
+            Console.WriteLine("Введите количество элементов массива:");
+            int.TryParse(Console.ReadLine(), out n);
+            //n = Convert.ToInt32(Console.ReadLine());
+            if (n <= 0 || n > 20)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (n <= 0 || n > 20);
+
+         return n;
+      }
+
       public static int NumberArrayElements(string nameArray)
       {
          int n;
