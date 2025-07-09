@@ -31,7 +31,7 @@ namespace Homework_5._1
          double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne);
          if (sourceOne.Length == 0)
          {
-            Console.WriteLine("Исходный строковый массив {0} пуст", nameOne);
+            Console.WriteLine("Исходный строковый массив пуст");
          }
          else
          {
