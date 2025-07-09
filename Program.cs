@@ -16,25 +16,31 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         string nameFileOne = "a.txt";
-         string nameFileTwo = "finish.txt";
+         // Обновить методы для int
+         string nameOne = "A";
+         int elementsOne = LibraryFor1DArray.NumberArrayElements(nameOne);
 
-         int rowOne = LibraryFor1DArray.SizeRow();
-         int columnOne = LibraryFor1DArray.SizeColumn();
-         int multipleElement = LibraryFor1DArray.MultipleElement();
-
-         string pathOne = Path.GetFullPath(nameFileOne);
-         int[,] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne, nameFileOne);
-         if (sourceOne.GetLength(0) == 0)
+         string pathOne = Path.GetFullPath("a.txt");
+         if (!File.Exists(pathOne))
          {
-            Console.WriteLine("Файл {0} пуст", nameFileOne);
+            Console.WriteLine("Ошибка при открытии файла для чтения. Файл не существует");
+         }
+
+         string pathFour = Path.GetFullPath("finish.txt");
+         File.Create(pathFour).Close();
+
+         double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne, nameOne);
+         if (sourceOne.Length == 0)
+         {
+            Console.WriteLine("Исходный строковый массив {0} пуст", nameOne);
          }
          else
          {
-            int[,] inputArray = LibraryFor1DArray.InputArrayInt(sourceOne, rowOne, columnOne);
-            string pathTwo = Path.GetFullPath(nameFileTwo);
-            File.Create(pathTwo).Close();
-            LibraryFor1DArray.SplittingLines(inputArray, multipleElement, nameFileTwo);
+            double[] searchOne = LibraryFor1DArray.InputArray(sourceOne, elementsOne, nameOne);
+            double maxOne = LibraryFor1DArray.FindMaxArray(searchOne, nameOne);
+            double[] replacingOne = LibraryFor1DArray.ReplacingMax(searchOne, maxOne);
+            string[] arrayOne = LibraryFor1DArray.VivodStringArray(replacingOne);
+            LibraryFor1DArray.FileAppendString(arrayOne, pathFour);
          }
 
          Console.ReadKey();
