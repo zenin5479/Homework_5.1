@@ -17,8 +17,7 @@ namespace Homework_5._1
       static void Main(string[] args)
       {
          // Обновить методы для int
-         string nameOne = "A";
-         int elementsOne = LibraryFor1DArray.NumberArrayElements(nameOne);
+        int elementsOne = LibraryFor1DArray.NumberArrayElements();
 
          string pathOne = Path.GetFullPath("a.txt");
          if (!File.Exists(pathOne))
