@@ -29,19 +29,19 @@ namespace Homework_5._1
          string pathFour = Path.GetFullPath("finish.txt");
          File.Create(pathFour).Close();
 
-         double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne, nameOne);
-         if (sourceOne.Length == 0)
-         {
-            Console.WriteLine("Исходный строковый массив {0} пуст", nameOne);
-         }
-         else
-         {
-            double[] searchOne = LibraryFor1DArray.InputArray(sourceOne, elementsOne, nameOne);
-            double maxOne = LibraryFor1DArray.FindMaxArray(searchOne, nameOne);
-            double[] replacingOne = LibraryFor1DArray.ReplacingMax(searchOne, maxOne);
-            string[] arrayOne = LibraryFor1DArray.VivodStringArray(replacingOne);
-            LibraryFor1DArray.FileAppendString(arrayOne, pathFour);
-         }
+         //double[] sourceOne = LibraryFor1DArray.VvodArray(pathOne, nameOne);
+         //if (sourceOne.Length == 0)
+         //{
+         //   Console.WriteLine("Исходный строковый массив {0} пуст", nameOne);
+         //}
+         //else
+         //{
+         //   double[] searchOne = LibraryFor1DArray.InputArray(sourceOne, elementsOne, nameOne);
+         //   double maxOne = LibraryFor1DArray.FindMaxArray(searchOne, nameOne);
+         //   double[] replacingOne = LibraryFor1DArray.ReplacingMax(searchOne, maxOne);
+         //   string[] arrayOne = LibraryFor1DArray.VivodStringArray(replacingOne);
+         //   LibraryFor1DArray.FileAppendString(arrayOne, pathFour);
+         //}
 
          Console.ReadKey();
       }
