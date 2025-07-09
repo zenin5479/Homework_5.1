@@ -222,12 +222,28 @@ namespace Homework_5._1
          return arrayDouble;
       }
 
+      public static double[] InputArray(double[] inputArray, int n)
+      {
+         Console.WriteLine("Массив вещественных чисел для проведения поиска:");
+         double[] outputArray = new double[n];
+         int i = 0;
+         while (i < n)
+         {
+            outputArray[i] = inputArray[i];
+            //Console.Write("{0:f2} ", outputArray[i]);
+            //Console.Write("{0:f} ", outputArray[i]);
+            Console.Write("{0} ", outputArray[i]);
+            i++;
+         }
+
+         Console.WriteLine();
+         return outputArray;
+      }
+
       public static double[] InputArray(double[] inputArray, int n, string nameArray)
       {
-         Console.WriteLine("Массив вещественных чисел {0} для проведения поиска", nameArray);
+         Console.WriteLine("Массив вещественных чисел {0} для проведения поиска:", nameArray);
          double[] outputArray = new double[n];
-
-
          int i = 0;
          while (i < n)
          {
