@@ -605,12 +605,7 @@ namespace Homework_5._1
          return inputArray;
       }
 
-      public static void FileAppendString(string[] stringArray, string filePath)
-      {
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         File.AppendAllLines(filePath, stringArray);
-      }
+      
 
       public static int SearchingNull(double[] inputArray)
       {
@@ -918,6 +913,12 @@ namespace Homework_5._1
          return arrayString;
       }
 
+      public static void FileAppendString(string[] stringArray, string filePath)
+      {
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         File.AppendAllLines(filePath, stringArray);
+      }
       public static void FileWriteString(string[] stringArray)
       {
          // Запись массива строк в файл
