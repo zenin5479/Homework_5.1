@@ -913,28 +913,22 @@ namespace Homework_5._1
          return arrayString;
       }
 
-      public static void FileAppendString(string[] stringArray, string filePath)
+      public static void FileAppendString(string line, string nameFile)
       {
-         // Запись массива строк в файл
+         // Создание одномерного массива строк string[] для записи в файл строки
+         string[] stringArray = { line };
+         // Добавление массива строк в файл
+         string filePath = AppContext.BaseDirectory + nameFile;
+         File.AppendAllLines(filePath, stringArray);
+      }
+      
+      public static void FileAppendStringArray(string[] stringArray, string filePath)
+      {
+         // Добавление массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          File.AppendAllLines(filePath, stringArray);
       }
-      public static void FileWriteString(string[] stringArray)
-      {
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
-         File.WriteAllLines(filePath, stringArray);
-      }
       
-      public static void FileWriteArray(string[] arrayString)
-      {
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "c.txt";
-         File.WriteAllLines(filePath, arrayString);
-      }
-
       public static void FileWriteArrayString(string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
@@ -943,13 +937,6 @@ namespace Homework_5._1
          File.WriteAllLines(filePath, arrayString);
       }
 
-      public static void FileAppendStringArray(string line, string nameFile)
-      {
-         // Создание одномерного массива строк string[] для записи в файл строки
-         string[] stringArray = { line };
-         // Добавление массива строк в файл
-         string filePath = AppContext.BaseDirectory + nameFile;
-         File.AppendAllLines(filePath, stringArray);
-      }
+      
    }
 }
