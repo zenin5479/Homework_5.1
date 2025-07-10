@@ -605,8 +605,6 @@ namespace Homework_5._1
          return inputArray;
       }
 
-
-
       public static int SearchingNull(double[] inputArray)
       {
          double numbercomparison = 0;

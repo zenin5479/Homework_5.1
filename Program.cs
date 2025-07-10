@@ -18,21 +18,12 @@ namespace Homework_5._1
       {
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
-
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
          string pathOne = Path.GetFullPath(nameFileOne);
-         if (!File.Exists(pathOne))
-         {
-            Console.WriteLine("Ошибка при открытии файла для чтения. Файл не существует");
-         }
-
-         string pathFour = Path.GetFullPath(nameFileTwo);
-         File.Create(pathFour).Close();
-
          int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
          if (sourceOne.Length == 0)
          {
-            Console.WriteLine("Исходный строковый массив пуст");
+            Console.WriteLine("Файл {0} пуст", nameFileOne);
          }
          else
          {
@@ -40,6 +31,8 @@ namespace Homework_5._1
             int maxOne = LibraryFor1DArray.FindMaxArrayInt(searchOne);
             int[] replacingOne = LibraryFor1DArray.ReplacingMaxInt(searchOne, maxOne);
             string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
+            string pathTwo = Path.GetFullPath(nameFileTwo);
+            File.Create(pathTwo).Close();
             LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
