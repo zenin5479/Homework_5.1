@@ -42,7 +42,7 @@ namespace Homework_5._1
             int maxOne = LibraryFor1DArray.FindMaxArrayInt(searchOne);
             int[] replacingOne = LibraryFor1DArray.ReplacingMaxInt(searchOne, maxOne);
             string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-            LibraryFor1DArray.FileAppendStringArray(arrayOne, pathFour);
+            LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
          Console.ReadKey();
