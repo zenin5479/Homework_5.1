@@ -313,7 +313,7 @@ namespace Homework_5._1
          return arrayDouble;
       }
 
-      public static int[] InputArray(int[] inputArray, int n)
+      public static int[] InputArrayInt(int[] inputArray, int n)
       {
          Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
          int[] outputArray = new int[n];
@@ -329,7 +329,7 @@ namespace Homework_5._1
          return outputArray;
       }
 
-      public static double[] InputArray(double[] inputArray, int n)
+      public static double[] InputArrayDouble(double[] inputArray, int n)
       {
          Console.WriteLine("Массив вещественных чисел для проведения поиска:");
          double[] outputArray = new double[n];
@@ -347,7 +347,7 @@ namespace Homework_5._1
          return outputArray;
       }
 
-      public static double[] InputArray(double[] inputArray, int n, string nameArray)
+      public static double[] InputArrayDouble(double[] inputArray, int n, string nameArray)
       {
          Console.WriteLine("Массив вещественных чисел {0} для проведения поиска:", nameArray);
          double[] outputArray = new double[n];
@@ -363,6 +363,27 @@ namespace Homework_5._1
 
          Console.WriteLine();
          return outputArray;
+      }
+
+      public static int FindMaxArrayInt(int[] inputArray)
+      {
+         // Поиск максимального элемента строки (без флагов bool)
+         // Cчитаем, что максимум - это первый элемент строки
+         double max = inputArray[0];
+         int column = 0;
+         while (column < inputArray.Length)
+         {
+            if (max < inputArray[column])
+            {
+               max = inputArray[column];
+            }
+
+            column++;
+         }
+
+         Console.WriteLine("Максимум в массиве равен: {0}", max);
+         //Console.WriteLine("Максимум в массиве равен: {0:f2}", max);
+         return max;
       }
 
       public static double FindMaxArray(double[] inputArray)
