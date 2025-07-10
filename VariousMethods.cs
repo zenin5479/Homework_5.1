@@ -457,16 +457,16 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения double используя метод Equals(Double)
-            if (inputArray[i].Equals(numbercomparison))
-            {
-               count++;
-            }
+            //if (inputArray[i].Equals(numbercomparison))
+            //{
+            //   count++;
+            //}
 
             // Сравниваем значения double используя оператор равенства ==
-            if (inputArray[i] == 0)
-            {
-               count++;
-            }
+            //if (inputArray[i] == 0)
+            //{
+            //   count++;
+            //}
 
             i++;
          }
