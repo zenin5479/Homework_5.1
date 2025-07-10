@@ -38,7 +38,7 @@ namespace Homework_5._1
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
             int maxOne = LibraryFor1DArray.FindMaxArrayInt(searchOne);
             int[] replacingOne = LibraryFor1DArray.ReplacingMaxInt(searchOne, maxOne);
-            string[] arrayOne = LibraryFor1DArray.VivodStringArray(replacingOne);
+            string[] arrayOne = LibraryFor1DArray.VivodStringArrayInt(replacingOne);
             LibraryFor1DArray.FileAppendString(arrayOne, pathFour);
          }
 
