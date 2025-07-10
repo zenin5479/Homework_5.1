@@ -299,7 +299,7 @@ namespace Homework_5._1
          //Console.WriteLine("Максимум в массиве {0} равен: {1:f2}", nameArray, max);
          return max;
       }
-      
+
       public static double[] ReplacingMax(double[] inputArray, double max)
       {
          double[] outputArray = new double[inputArray.Length];
@@ -330,6 +330,46 @@ namespace Homework_5._1
          }
 
          return outputArray;
+      }
+
+      public static bool FindZero(double[] inputArray)
+      {
+         double numbercomparison = 0;
+         bool flag = false;
+         int i = 0;
+         while (i < inputArray.Length && flag == false)
+         {
+            // Сравниваем значения double используя метод CompareTo(Double) 
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
+            {
+               flag = true;
+            }
+
+            // Сравниваем значения double используя метод Equals(Double)
+            //if (inputArray[i].Equals(numbercomparison))
+            //{
+            //   flag = true;
+            //}
+
+            // Сравниваем значения double используя оператор равенства ==
+            //if (inputArray[i] == 0)
+            //{
+            //   flag = true;
+            //}
+
+            i++;
+         }
+
+         if (flag)
+         {
+            Console.WriteLine("В массиве имеется элемент равный нулю");
+         }
+         else
+         {
+            Console.WriteLine("В массиве отсутствует элемент равный нулю");
+         }
+
+         return flag;
       }
 
       public static bool FindZero(double[] inputArray, string nameArray)
