@@ -626,7 +626,7 @@ namespace Homework_5._1
          Console.WriteLine("В массиве отрицательных элементов: {0}", count);
          if (count == 0)
          {
-            Console.WriteLine("В массиве {0} нет отрицательных элементов";
+            Console.WriteLine("В массиве нет отрицательных элементов");
          }
 
          return count;
