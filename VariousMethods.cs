@@ -609,7 +609,7 @@ namespace Homework_5._1
          }
       }
 
-      public static int SearchingNegative(double[] inputArray, string nameArray)
+      public static int SearchingNegative(double[] inputArray)
       {
          int count = 0;
          int i = 0;
@@ -632,7 +632,7 @@ namespace Homework_5._1
          return count;
       }
 
-      public static int SearchingNegativeNumbers(double[] inputArray, string nameArray)
+      public static int SearchingNegative(double[] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;
