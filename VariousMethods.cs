@@ -444,24 +444,24 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения int используя метод Equals(Int)
-            if (inputArray[i].Equals(max))
-            {
-               outputArray[i] = inputArray[i];
-            }
-            else
-            {
-               outputArray[i] = i;
-            }
+            //if (inputArray[i].Equals(max))
+            //{
+            //   outputArray[i] = inputArray[i];
+            //}
+            //else
+            //{
+            //   outputArray[i] = i;
+            //}
 
             // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == max)
-            {
-               outputArray[i] = inputArray[i];
-            }
-            else
-            {
-               outputArray[i] = i;
-            }
+            //if (inputArray[i] == max)
+            //{
+            //   outputArray[i] = inputArray[i];
+            //}
+            //else
+            //{
+            //   outputArray[i] = i;
+            //}
 
             i++;
          }
