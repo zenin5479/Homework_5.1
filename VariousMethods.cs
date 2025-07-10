@@ -936,7 +936,5 @@ namespace Homework_5._1
          string filePath = AppContext.BaseDirectory + nameFile;
          File.WriteAllLines(filePath, arrayString);
       }
-
-      
    }
 }
