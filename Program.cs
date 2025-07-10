@@ -16,8 +16,6 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         // Обновить методы для int !!!
-         // Написать перегрузки методов без названия массива (nameArray) +
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
