@@ -427,6 +427,38 @@ namespace Homework_5._1
          return max;
       }
 
+      public static int[] ReplacingMax(int[] inputArray, double max)
+      {
+         double[] outputArray = new double[inputArray.Length];
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения double используя метод CompareTo(Double) 
+            if (inputArray[i].CompareTo(max) == 0)
+            {
+               outputArray[i] = inputArray[i];
+            }
+            else
+            {
+               outputArray[i] = i;
+            }
+
+            // Сравниваем значения double используя метод Equals(Double)
+            //if (inputArray[i].Equals(max))
+            //{
+            //   outputArray[i] = inputArray[i];
+            //}
+            //else
+            //{
+            //   outputArray[i] = i;
+            //}
+
+            i++;
+         }
+
+         return outputArray;
+      }
+
       public static double[] ReplacingMax(double[] inputArray, double max)
       {
          double[] outputArray = new double[inputArray.Length];
