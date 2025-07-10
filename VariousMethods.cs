@@ -427,13 +427,13 @@ namespace Homework_5._1
          return max;
       }
 
-      public static int[] ReplacingMaxInt(int[] inputArray, double max)
+      public static int[] ReplacingMaxInt(int[] inputArray, int max)
       {
          int[] outputArray = new int[inputArray.Length];
          int i = 0;
          while (i < inputArray.Length)
          {
-            // Сравниваем значения int используя метод CompareTo
+            // Сравниваем значения double используя метод CompareTo(Double) 
             if (inputArray[i].CompareTo(max) == 0)
             {
                outputArray[i] = inputArray[i];
@@ -442,6 +442,31 @@ namespace Homework_5._1
             {
                outputArray[i] = i;
             }
+
+            // Сравниваем значения double используя метод Equals(Double)
+            if (inputArray[i].Equals(max))
+            {
+               outputArray[i] = inputArray[i];
+            }
+            else
+            {
+               outputArray[i] = i;
+            }
+
+
+            // Сравниваем значения double используя метод Equals(Double)
+            if (inputArray[i].Equals(numbercomparison))
+            {
+               flag = true;
+            }
+
+            // Сравниваем значения double используя оператор равенства ==
+            if (inputArray[i] == 0)
+            {
+               flag = true;
+            }
+
+
 
             i++;
          }
