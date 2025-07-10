@@ -43,7 +43,7 @@ namespace Homework_5._1
       public static int[] VvodArrayInt(string path)
       {
          string stroka = null;
-         double[] arrayDouble = { };
+         int[] arrayInt = { };
          FileStream filestream = File.Open(path, FileMode.Open, FileAccess.Read);
          if (filestream == null || filestream.Length == 0)
          {
@@ -86,10 +86,10 @@ namespace Homework_5._1
 
                //Console.WriteLine("Количество столбцов {0}", сolumn);
 
-               // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-               Console.WriteLine("Массив вещественных чисел:");
-               // Одномерный массив вещественных чисел
-               arrayDouble = new double[сolumn];
+               // Разделение строки на подстроки по пробелу и конвертация подстрок в int
+               Console.WriteLine("Одномерный целочисленный массив:");
+               // Одномерный целочисленный массив
+               arrayInt = new int[сolumn];
                // Построитель строк
                StringBuilder stringModified = new StringBuilder();
                // Счетчик символов обнуляем
@@ -105,8 +105,8 @@ namespace Homework_5._1
                   else
                   {
                      string subLine = stringModified.ToString();
-                     arrayDouble[сolumn] = Convert.ToDouble(subLine);
-                     Console.Write(arrayDouble[сolumn] + " ");
+                     arrayInt[сolumn] = Convert.ToInt32(subLine);
+                     Console.Write(arrayInt[сolumn] + " ");
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -114,8 +114,8 @@ namespace Homework_5._1
                   if (symbolСount == stroka.Length - 1)
                   {
                      string subLine = stringModified.ToString();
-                     arrayDouble[сolumn] = Convert.ToDouble(subLine);
-                     Console.Write(arrayDouble[сolumn]);
+                     arrayInt[сolumn] = Convert.ToInt32(subLine);
+                     Console.Write(arrayInt[сolumn]);
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -128,7 +128,7 @@ namespace Homework_5._1
             Console.WriteLine();
          }
 
-         return arrayDouble;
+         return arrayInt;
       }
 
       public static double[] VvodArrayDouble(string path)
