@@ -315,7 +315,7 @@ namespace Homework_5._1
 
       public static int[] InputArray(int[] inputArray, int n)
       {
-         Console.WriteLine("Массив вещественных чисел для проведения поиска:");
+         Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
          int[] outputArray = new int[n];
          int i = 0;
          while (i < n)
