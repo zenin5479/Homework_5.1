@@ -40,7 +40,7 @@ namespace Homework_5._1
          return n;
       }
 
-      public static int[] VvodArrayInt(string path)
+      public static int[] EnterArrayInt(string path)
       {
          string stroka = null;
          int[] arrayInt = { };
@@ -131,7 +131,7 @@ namespace Homework_5._1
          return arrayInt;
       }
 
-      public static double[] VvodArrayDouble(string path)
+      public static double[] EnterArrayDouble(string path)
       {
          string stroka = null;
          double[] arrayDouble = { };
@@ -222,7 +222,7 @@ namespace Homework_5._1
          return arrayDouble;
       }
 
-      public static double[] VvodArrayDouble(string path, string nameArray)
+      public static double[] EnterArrayDouble(string path, string nameArray)
       {
          string stroka = null;
          double[] arrayDouble = { };
@@ -469,7 +469,7 @@ namespace Homework_5._1
          return outputArray;
       }
 
-      public static double[] ReplacingMax(double[] inputArray, double max)
+      public static double[] ReplacingMaxDouble(double[] inputArray, double max)
       {
          double[] outputArray = new double[inputArray.Length];
          int i = 0;
@@ -824,7 +824,33 @@ namespace Homework_5._1
          return count;
       }
 
-      public static string[] VivodStringArrayInt(int[] inputArray)
+      public static string[] OutputStringArrayInt(int[] inputArray)
+      {
+         // Объединение одномерного массива int[]
+         // в одномерный массив строк string[] для записи в файл (в одну строку массива)
+         Console.WriteLine("Одномерный массив строк");
+         StringBuilder stringModified = new StringBuilder();
+         int row = 0;
+         while (row < inputArray.Length)
+         {
+            if (row != inputArray.Length - 1)
+            {
+               stringModified.Append(inputArray[row] + " ");
+            }
+            else
+            {
+               stringModified.Append(inputArray[row]);
+            }
+
+            row++;
+         }
+
+         Console.WriteLine(stringModified);
+         string[] stringArray = { stringModified.ToString() };
+         return stringArray;
+      }
+
+      public static string[] OutputStringArrayDouble(double[] inputArray)
       {
          // Объединение одномерного массива максимальных значений строк double[]
          // в одномерный массив строк string[] для записи в файл (в одну строку массива)
@@ -849,42 +875,29 @@ namespace Homework_5._1
          string[] stringArray = { stringModified.ToString() };
          return stringArray;
       }
-
-      public static string[] VivodStringArrayDouble(double[] inputArray)
+      
+      public static string[] OutputArrayStringInt(int[] inputArray)
       {
-         // Объединение одномерного массива максимальных значений строк double[]
-         // в одномерный массив строк string[] для записи в файл (в одну строку массива)
+         // Объединение одномерного массива int[]
+         // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[inputArray.Length];
          int row = 0;
          while (row < inputArray.Length)
          {
-            if (row != inputArray.Length - 1)
-            {
-               stringModified.Append(inputArray[row] + " ");
-            }
-            else
-            {
-               stringModified.Append(inputArray[row]);
-            }
-
+            stringModified.Append(inputArray[row]);
+            string subLine = stringModified.ToString();
+            arrayString[row] = subLine;
+            Console.WriteLine(subLine);
+            stringModified.Clear();
             row++;
          }
 
-         Console.WriteLine(stringModified);
-         string[] stringArray = { stringModified.ToString() };
-         return stringArray;
+         return arrayString;
       }
 
-      public static void FileWriteString(string[] stringArray)
-      {
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
-         File.WriteAllLines(filePath, stringArray);
-      }
-
-      public static string[] VivodArrayString(double[] inputArray)
+      public static string[] OutputArrayStringDouble(double[] inputArray)
       {
          // Объединение одномерного массива максимальных значений строк double[]
          // в одномерный массив строк string[] для записи в файл
@@ -905,12 +918,37 @@ namespace Homework_5._1
          return arrayString;
       }
 
+      public static void FileWriteString(string[] stringArray)
+      {
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "b.txt";
+         File.WriteAllLines(filePath, stringArray);
+      }
+      
       public static void FileWriteArray(string[] arrayString)
       {
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "c.txt";
          File.WriteAllLines(filePath, arrayString);
+      }
+
+      public static void FileWriteArrayString(string[] arrayString, string nameFile)
+      {
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+         string filePath = AppContext.BaseDirectory + nameFile;
+         File.WriteAllLines(filePath, arrayString);
+      }
+
+      public static void FileAppendStringArray(string line, string nameFile)
+      {
+         // Создание одномерного массива строк string[] для записи в файл строки
+         string[] stringArray = { line };
+         // Добавление массива строк в файл
+         string filePath = AppContext.BaseDirectory + nameFile;
+         File.AppendAllLines(filePath, stringArray);
       }
    }
 }

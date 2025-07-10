@@ -18,17 +18,20 @@ namespace Homework_5._1
       {
          // Обновить методы для int !!!
          // Написать перегрузки методов без названия массива (nameArray) +
+         string nameFileOne = "a.txt";
+         string nameFileTwo = "finish.txt";
+
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
-         string pathOne = Path.GetFullPath("a.txt");
+         string pathOne = Path.GetFullPath(nameFileOne);
          if (!File.Exists(pathOne))
          {
             Console.WriteLine("Ошибка при открытии файла для чтения. Файл не существует");
          }
 
-         string pathFour = Path.GetFullPath("finish.txt");
+         string pathFour = Path.GetFullPath(nameFileTwo);
          File.Create(pathFour).Close();
 
-         int[] sourceOne = LibraryFor1DArray.VvodArrayInt(pathOne);
+         int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
          if (sourceOne.Length == 0)
          {
             Console.WriteLine("Исходный строковый массив пуст");
@@ -38,7 +41,7 @@ namespace Homework_5._1
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
             int maxOne = LibraryFor1DArray.FindMaxArrayInt(searchOne);
             int[] replacingOne = LibraryFor1DArray.ReplacingMaxInt(searchOne, maxOne);
-            string[] arrayOne = LibraryFor1DArray.VivodStringArrayInt(replacingOne);
+            string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             LibraryFor1DArray.FileAppendString(arrayOne, pathFour);
          }
 
