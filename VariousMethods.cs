@@ -427,9 +427,9 @@ namespace Homework_5._1
          return max;
       }
 
-      public static int[] ReplacingMax(int[] inputArray, double max)
+      public static int[] ReplacingMaxInt(int[] inputArray, double max)
       {
-         double[] outputArray = new double[inputArray.Length];
+         int[] outputArray = new int[inputArray.Length];
          int i = 0;
          while (i < inputArray.Length)
          {
@@ -444,14 +444,14 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения double используя метод Equals(Double)
-            //if (inputArray[i].Equals(max))
-            //{
-            //   outputArray[i] = inputArray[i];
-            //}
-            //else
-            //{
-            //   outputArray[i] = i;
-            //}
+            if (inputArray[i].Equals(max))
+            {
+               outputArray[i] = inputArray[i];
+            }
+            else
+            {
+               outputArray[i] = i;
+            }
 
             i++;
          }
