@@ -443,6 +443,46 @@ namespace Homework_5._1
          File.AppendAllLines(filePath, stringArray);
       }
 
+      public static int SearchingNull(double[] inputArray)
+      {
+         double numbercomparison = 0;
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения double используя метод CompareTo(Double) 
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
+            {
+               count++;
+            }
+
+            // Сравниваем значения double используя метод Equals(Double)
+            if (inputArray[i].Equals(numbercomparison))
+            {
+               count++;
+            }
+
+            // Сравниваем значения double используя оператор равенства ==
+            if (inputArray[i] == 0)
+            {
+               count++;
+            }
+
+            i++;
+         }
+
+         if (count != 0)
+         {
+            Console.WriteLine("В массиве элементов равных нулю: {0}", count);
+         }
+         else
+         {
+            Console.WriteLine("В массиве нет элементов равных нулю");
+         }
+
+         return count;
+      }
+
       public static int SearchingNull(double[] inputArray, string nameArray)
       {
          double numbercomparison = 0;
