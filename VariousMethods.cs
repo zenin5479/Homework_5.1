@@ -915,6 +915,8 @@ namespace Homework_5._1
 
       public static void FileAppendString(string line, string nameFile)
       {
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
          // Добавление массива строк в файл
@@ -922,10 +924,12 @@ namespace Homework_5._1
          File.AppendAllLines(filePath, stringArray);
       }
       
-      public static void FileAppendStringArray(string[] stringArray, string filePath)
+      public static void FileAppendStringArray(string[] stringArray, string nameFile)
       {
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+
          // Добавление массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
       }
       
