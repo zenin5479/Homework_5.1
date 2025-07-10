@@ -433,7 +433,7 @@ namespace Homework_5._1
          int i = 0;
          while (i < inputArray.Length)
          {
-            // Сравниваем значения double используя метод CompareTo(Double) 
+            // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(max) == 0)
             {
                outputArray[i] = inputArray[i];
@@ -443,7 +443,7 @@ namespace Homework_5._1
                outputArray[i] = i;
             }
 
-            // Сравниваем значения double используя метод Equals(Double)
+            // Сравниваем значения int используя метод Equals(Int)
             if (inputArray[i].Equals(max))
             {
                outputArray[i] = inputArray[i];
@@ -453,20 +453,15 @@ namespace Homework_5._1
                outputArray[i] = i;
             }
 
-
-            // Сравниваем значения double используя метод Equals(Double)
-            if (inputArray[i].Equals(numbercomparison))
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == max)
             {
-               flag = true;
+               outputArray[i] = inputArray[i];
             }
-
-            // Сравниваем значения double используя оператор равенства ==
-            if (inputArray[i] == 0)
+            else
             {
-               flag = true;
+               outputArray[i] = i;
             }
-
-
 
             i++;
          }
