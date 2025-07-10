@@ -313,6 +313,22 @@ namespace Homework_5._1
          return arrayDouble;
       }
 
+      public static int[] InputArray(int[] inputArray, int n)
+      {
+         Console.WriteLine("Массив вещественных чисел для проведения поиска:");
+         int[] outputArray = new int[n];
+         int i = 0;
+         while (i < n)
+         {
+            outputArray[i] = inputArray[i];
+            Console.Write("{0} ", outputArray[i]);
+            i++;
+         }
+
+         Console.WriteLine();
+         return outputArray;
+      }
+
       public static double[] InputArray(double[] inputArray, int n)
       {
          Console.WriteLine("Массив вещественных чисел для проведения поиска:");
