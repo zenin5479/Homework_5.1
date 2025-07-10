@@ -605,7 +605,7 @@ namespace Homework_5._1
          return inputArray;
       }
 
-      
+
 
       public static int SearchingNull(double[] inputArray)
       {
@@ -870,7 +870,7 @@ namespace Homework_5._1
          string[] stringArray = { stringModified.ToString() };
          return stringArray;
       }
-      
+
       public static string[] OutputArrayStringInt(int[] inputArray)
       {
          // Объединение одномерного массива int[]
@@ -916,23 +916,21 @@ namespace Homework_5._1
       public static void FileAppendString(string line, string nameFile)
       {
          Console.WriteLine("Запись массива строк в файл {0}", nameFile);
-
          // Создание одномерного массива строк string[] для записи в файл строки
          string[] stringArray = { line };
          // Добавление массива строк в файл
          string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
       }
-      
+
       public static void FileAppendStringArray(string[] stringArray, string nameFile)
       {
          Console.WriteLine("Запись массива строк в файл {0}", nameFile);
-
          // Добавление массива строк в файл
          string filePath = AppContext.BaseDirectory + nameFile;
          File.AppendAllLines(filePath, stringArray);
       }
-      
+
       public static void FileWriteArrayString(string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
