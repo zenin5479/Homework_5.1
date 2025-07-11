@@ -508,7 +508,7 @@ namespace Homework_5._1
          int i = 0;
          while (i < inputArray.Length && flag == false)
          {
-            // Сравниваем значения int используя метод CompareTo(Double) 
+            // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(numbercomparison) == 0)
             {
                flag = true;
@@ -542,17 +542,17 @@ namespace Homework_5._1
          int i = 0;
          while (i < inputArray.Length && flag == false)
          {
-            // Сравниваем значения double используя метод CompareTo(Double) 
+            // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(numbercomparison) == 0)
             {
                flag = true;
             }
 
-            // Сравниваем значения double используя оператор равенства ==
-            if (inputArray[i] == 0)
-            {
-               flag = true;
-            }
+            // Сравниваем значения int используя оператор равенства ==
+            //if (inputArray[i] == 0)
+            //{
+            //   flag = true;
+            //}
 
             i++;
          }
@@ -649,20 +649,20 @@ namespace Homework_5._1
          return flag;
       }
 
-      
+      //
       public static int[] ReplacingZeroInt(int[] inputArray)
       {
          int numbercomparison = 0;
          int i = 0;
          while (i < inputArray.Length)
          {
-            // Сравниваем значения double используя метод CompareTo(Double) 
+            // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(numbercomparison) < 0)
             {
                inputArray[i] = i;
             }
 
-            // Сравниваем значения double используя оператор равенства ==
+            // Сравниваем значения int используя оператор равенства ==
             if (inputArray[i] == numbercomparison)
             {
                inputArray[i] = i;
@@ -681,7 +681,7 @@ namespace Homework_5._1
          while (i < inputArray.Length)
          {
             // Сравниваем значения double используя метод CompareTo(Double) 
-            if (inputArray[i].CompareTo(numbercomparison) < 0)
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
             {
                inputArray[i] = i;
             }
