@@ -515,10 +515,10 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == 0)
-            {
-               flag = true;
-            }
+            //if (inputArray[i] == 0)
+            //{
+            //   flag = true;
+            //}
 
             i++;
          }
@@ -535,7 +535,46 @@ namespace Homework_5._1
          return flag;
       }
 
-      public static bool FindZero(double[] inputArray)
+      public static bool FindZeroInt(int[] inputArray, string nameArray)
+      {
+         double numbercomparison = 0;
+         bool flag = false;
+         int i = 0;
+         while (i < inputArray.Length && flag == false)
+         {
+            // Сравниваем значения double используя метод CompareTo(Double) 
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
+            {
+               flag = true;
+            }
+
+            // Сравниваем значения double используя метод Equals(Double)
+            //if (inputArray[i].Equals(numbercomparison))
+            //{
+            //   flag = true;
+            //}
+
+            // Сравниваем значения double используя оператор равенства ==
+            //if (inputArray[i] == 0)
+            //{
+            //   flag = true;
+            //}
+
+            i++;
+         }
+
+         if (flag)
+         {
+            Console.WriteLine("В массиве {0} имеется элемент равный нулю", nameArray);
+         }
+         else
+         {
+            Console.WriteLine("В массиве {0} отсутствует элемент равный нулю", nameArray);
+         }
+
+         return flag;
+      }
+      public static bool FindZeroDouble(double[] inputArray)
       {
          double numbercomparison = 0;
          bool flag = false;
@@ -575,7 +614,10 @@ namespace Homework_5._1
          return flag;
       }
 
-      public static bool FindZero(double[] inputArray, string nameArray)
+
+
+
+      public static bool FindZeroDouble(double[] inputArray, string nameArray)
       {
          double numbercomparison = 0;
          bool flag = false;
