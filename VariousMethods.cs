@@ -930,7 +930,6 @@ namespace Homework_5._1
             Console.WriteLine("Отрицательных элементов меньше в массиве C");
          }
       }
-
       
       public static int SearchingNegativeInt(int[] inputArray)
       {
@@ -978,9 +977,7 @@ namespace Homework_5._1
          return count;
       }
 
-      // Добавить методы для Int
-      
-      public static int SearchingNegativeInt(double[] inputArray, string nameArray)
+      public static int SearchingNegativeInt(int[] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;
@@ -1025,9 +1022,7 @@ namespace Homework_5._1
 
          return count;
       }
-
-      //
-
+      
       public static string[] OutputStringArrayInt(int[] inputArray)
       {
          // Объединение одномерного массива int[]
