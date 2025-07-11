@@ -20,6 +20,7 @@ namespace Homework_5._1
          string nameFileTwo = "finish.txt";
 
          int value = SetValue();
+         Console.WriteLine(value);
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
          string pathOne = Path.GetFullPath(nameFileOne);
          int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
