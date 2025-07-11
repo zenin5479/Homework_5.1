@@ -38,5 +38,12 @@ namespace Homework_5._1
 
          Console.ReadKey();
       }
+
+      public int EqualElement(int[] arr, int value)
+      {
+         int t = 0;
+         return t;
+
+      }
    }
 }
