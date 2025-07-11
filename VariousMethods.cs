@@ -501,30 +501,24 @@ namespace Homework_5._1
          return outputArray;
       }
 
-      public static bool FindZeroInt(double[] inputArray)
+      public static bool FindZeroInt(int[] inputArray)
       {
          double numbercomparison = 0;
          bool flag = false;
          int i = 0;
          while (i < inputArray.Length && flag == false)
          {
-            // Сравниваем значения double используя метод CompareTo(Double) 
+            // Сравниваем значения int используя метод CompareTo(Double) 
             if (inputArray[i].CompareTo(numbercomparison) == 0)
             {
                flag = true;
             }
 
-            // Сравниваем значения double используя метод Equals(Double)
-            //if (inputArray[i].Equals(numbercomparison))
-            //{
-            //   flag = true;
-            //}
-
-            // Сравниваем значения double используя оператор равенства ==
-            //if (inputArray[i] == 0)
-            //{
-            //   flag = true;
-            //}
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == 0)
+            {
+               flag = true;
+            }
 
             i++;
          }
