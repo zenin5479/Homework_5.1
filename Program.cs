@@ -32,7 +32,6 @@ namespace Homework_5._1
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
             int index = SearchingSetValue(searchOne, value);
             Console.WriteLine(index);
-
           
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             //string pathTwo = Path.GetFullPath(nameFileTwo);
@@ -73,11 +72,11 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-               return i;
-            }
+            //if (inputArray[i] == setValue)
+            //{
+            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+            //   return i;
+            //}
 
             i++;
          }
