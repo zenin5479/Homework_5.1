@@ -20,7 +20,6 @@ namespace Homework_5._1
          string nameFileTwo = "finish.txt";
 
          int value = EnterSetValue();
-         Console.WriteLine(value);
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
          string pathOne = Path.GetFullPath(nameFileOne);
          int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
@@ -31,12 +30,14 @@ namespace Homework_5._1
          else
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
-            int maxOne = LibraryFor1DArray.FindMaxArrayInt(searchOne);
-            int[] replacingOne = LibraryFor1DArray.ReplacingMaxInt(searchOne, maxOne);
-            string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-            string pathTwo = Path.GetFullPath(nameFileTwo);
-            File.Create(pathTwo).Close();
-            LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+            int index = SearchingSetValue(searchOne, value);
+            Console.WriteLine(index);
+
+          
+            //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
+            //string pathTwo = Path.GetFullPath(nameFileTwo);
+            //File.Create(pathTwo).Close();
+            //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
          Console.ReadKey();
@@ -59,7 +60,7 @@ namespace Homework_5._1
          return v;
       }
 
-      public int SearchingSetValue(int[] inputArray, int setValue)
+      public static int SearchingSetValue(int[] inputArray, int setValue)
       {
          int i = 0;
          while (i < inputArray.Length)
