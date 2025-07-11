@@ -696,8 +696,7 @@ namespace Homework_5._1
 
          return inputArray;
       }
-
-
+      
       public static int SearchingNullInt(int[] inputArray)
       {
          double numbercomparison = 0;
@@ -931,8 +930,7 @@ namespace Homework_5._1
             Console.WriteLine("Отрицательных элементов меньше в массиве C");
          }
       }
-
-
+      
       // Добавить методы для Int
       public static int SearchingNegativeDouble(double[] inputArray)
       {
