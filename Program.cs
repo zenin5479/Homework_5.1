@@ -19,7 +19,7 @@ namespace Homework_5._1
          string nameFileOne = "a.txt";
          string nameFileTwo = "finish.txt";
 
-         int value = SetValue();
+         int value = EnterSetValue();
          Console.WriteLine(value);
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
          string pathOne = Path.GetFullPath(nameFileOne);
@@ -42,7 +42,7 @@ namespace Homework_5._1
          Console.ReadKey();
       }
 
-      public static int SetValue()
+      public static int EnterSetValue()
       {
          int v;
          do
@@ -60,10 +60,82 @@ namespace Homework_5._1
       }
 
 
-      public int EqualElement(int[] arr, int value)
+      public int SearchingSetValue(int[] inputArray, int value)
       {
+         double numbercomparison = 0;
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения int используя метод CompareTo(Int) 
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
+            {
+               count++;
+            }
+
+            // Сравниваем значения int используя оператор равенства ==
+            //if (inputArray[i] == 0)
+            //{
+            //   count++;
+            //}
+
+            i++;
+         }
+
+         if (count != 0)
+         {
+            Console.WriteLine("В массиве элементов равных нулю: {0}", count);
+         }
+         else
+         {
+            Console.WriteLine("В массиве нет элементов равных нулю");
+         }
+
+         return count;
+
+
+
+
+
          int index = 0;
          return index;
       }
+
+      public static int SearchingNullInt(int[] inputArray)
+      {
+         double numbercomparison = 0;
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения int используя метод CompareTo(Int) 
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
+            {
+               count++;
+            }
+
+            // Сравниваем значения int используя оператор равенства ==
+            //if (inputArray[i] == 0)
+            //{
+            //   count++;
+            //}
+
+            i++;
+         }
+
+         if (count != 0)
+         {
+            Console.WriteLine("В массиве элементов равных нулю: {0}", count);
+         }
+         else
+         {
+            Console.WriteLine("В массиве нет элементов равных нулю");
+         }
+
+         return count;
+      }
+
+
+
    }
 }
