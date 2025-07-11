@@ -568,6 +568,7 @@ namespace Homework_5._1
 
          return flag;
       }
+      
       public static bool FindZeroDouble(double[] inputArray)
       {
          double numbercomparison = 0;
@@ -648,6 +649,7 @@ namespace Homework_5._1
          return flag;
       }
 
+      // Добавить методы для Int
       public static double[] ReplacingZero(double[] inputArray)
       {
          double numbercomparison = 0;
@@ -752,6 +754,8 @@ namespace Homework_5._1
          return count;
       }
 
+      //
+      
       public static void ComparisonNull(int a, int b, int c)
       {
          string[] name = { "A", "B", "C" };
@@ -838,6 +842,8 @@ namespace Homework_5._1
          }
       }
 
+
+      // Добавить методы для Int
       public static int SearchingNegative(double[] inputArray)
       {
          int count = 0;
@@ -883,6 +889,8 @@ namespace Homework_5._1
 
          return count;
       }
+
+      //
 
       public static string[] OutputStringArrayInt(int[] inputArray)
       {
