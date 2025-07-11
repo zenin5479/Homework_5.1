@@ -697,7 +697,7 @@ namespace Homework_5._1
          return inputArray;
       }
 
-      // Добавить методы для Int
+     
       public static int SearchingNullInt(int[] inputArray)
       {
          double numbercomparison = 0;
@@ -771,6 +771,43 @@ namespace Homework_5._1
 
          return count;
       }
+
+      // Добавить методы для Int
+
+      public static int SearchingNullInt(int[] inputArray, string nameArray)
+      {
+         double numbercomparison = 0;
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения int используя метод CompareTo(Int) 
+            if (inputArray[i].CompareTo(numbercomparison) == 0)
+            {
+               count++;
+            }
+
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == 0)
+            {
+               count++;
+            }
+
+            i++;
+         }
+
+         if (count != 0)
+         {
+            Console.WriteLine("В массиве {0} элементов равных нулю: {1}", nameArray, count);
+         }
+         else
+         {
+            Console.WriteLine("В массиве {0} нет элементов равных нулю", nameArray);
+         }
+
+         return count;
+      }
+
 
       public static int SearchingNullDouble(double[] inputArray, string nameArray)
       {
