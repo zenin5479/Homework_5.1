@@ -41,9 +41,8 @@ namespace Homework_5._1
 
       public int EqualElement(int[] arr, int value)
       {
-         int t = 0;
-         return t;
-
+         int index = 0;
+         return index;
       }
    }
 }
