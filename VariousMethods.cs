@@ -649,8 +649,32 @@ namespace Homework_5._1
          return flag;
       }
 
-      // Добавить методы для Int
-      public static double[] ReplacingZero(double[] inputArray)
+      
+      public static int[] ReplacingZeroInt(int[] inputArray)
+      {
+         int numbercomparison = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения double используя метод CompareTo(Double) 
+            if (inputArray[i].CompareTo(numbercomparison) < 0)
+            {
+               inputArray[i] = i;
+            }
+
+            // Сравниваем значения double используя оператор равенства ==
+            if (inputArray[i] == numbercomparison)
+            {
+               inputArray[i] = i;
+            }
+
+            i++;
+         }
+
+         return inputArray;
+      }      
+      
+      public static double[] ReplacingZeroDouble(double[] inputArray)
       {
          double numbercomparison = 0;
          int i = 0;
@@ -663,7 +687,7 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения double используя оператор равенства ==
-            //if (inputArray[i] < numbercomparison)
+            //if (inputArray[i] == numbercomparison)
             //{
             //   inputArray[i] = i;
             //}
@@ -673,8 +697,9 @@ namespace Homework_5._1
 
          return inputArray;
       }
-
-      public static int SearchingNull(double[] inputArray)
+     
+      // Добавить методы для Int
+      public static int SearchingNullDouble(double[] inputArray)
       {
          double numbercomparison = 0;
          int count = 0;
@@ -714,7 +739,7 @@ namespace Homework_5._1
          return count;
       }
 
-      public static int SearchingNull(double[] inputArray, string nameArray)
+      public static int SearchingNullDouble(double[] inputArray, string nameArray)
       {
          double numbercomparison = 0;
          int count = 0;
@@ -844,7 +869,7 @@ namespace Homework_5._1
 
 
       // Добавить методы для Int
-      public static int SearchingNegative(double[] inputArray)
+      public static int SearchingNegativeDouble(double[] inputArray)
       {
          int count = 0;
          int i = 0;
@@ -867,7 +892,7 @@ namespace Homework_5._1
          return count;
       }
 
-      public static int SearchingNegative(double[] inputArray, string nameArray)
+      public static int SearchingNegativeDouble(double[] inputArray, string nameArray)
       {
          int count = 0;
          int i = 0;
