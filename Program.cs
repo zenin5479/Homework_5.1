@@ -47,7 +47,7 @@ namespace Homework_5._1
          int v;
          do
          {
-            Console.WriteLine("Введите необходимый элемент:");
+            Console.WriteLine("Введите значение элемента:");
             int.TryParse(Console.ReadLine(), out v);
             //v = Convert.ToInt32(Console.ReadLine());
             if (v <= -100 || v >= 100)
@@ -61,30 +61,28 @@ namespace Homework_5._1
 
       public int SearchingSetValue(int[] inputArray, int setValue)
       {
-         bool flag = false;
          int i = 0;
          while (i < inputArray.Length)
          {
             // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(setValue) == 0)
             {
-               Console.WriteLine("В массиве элементов равных нулю: {0}", setValue);
-               flag = true;
+               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
                return i;
             }
 
             // Сравниваем значения int используя оператор равенства ==
-            //if (inputArray[i] == setValue)
-            //{
-            //   count++;
-            //}
+            if (inputArray[i] == setValue)
+            {
+               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+               return i;
+            }
 
             i++;
          }
 
-         Console.WriteLine("В массиве элементов равных нулю: {0}", count);
-
-         return 0;
+         Console.WriteLine("В массиве отсутствует необходимый элемент: {0}", setValue);
+         return -1;
       }
    }
 }
