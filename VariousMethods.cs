@@ -930,8 +930,31 @@ namespace Homework_5._1
             Console.WriteLine("Отрицательных элементов меньше в массиве C");
          }
       }
+
       
-      // Добавить методы для Int
+      public static int SearchingNegativeInt(int[] inputArray)
+      {
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            if (inputArray[i] < 0)
+            {
+               count++;
+            }
+
+            i++;
+         }
+
+         Console.WriteLine("В массиве отрицательных элементов: {0}", count);
+         if (count == 0)
+         {
+            Console.WriteLine("В массиве нет отрицательных элементов");
+         }
+
+         return count;
+      }
+
       public static int SearchingNegativeDouble(double[] inputArray)
       {
          int count = 0;
@@ -950,6 +973,31 @@ namespace Homework_5._1
          if (count == 0)
          {
             Console.WriteLine("В массиве нет отрицательных элементов");
+         }
+
+         return count;
+      }
+
+      // Добавить методы для Int
+      
+      public static int SearchingNegativeInt(double[] inputArray, string nameArray)
+      {
+         int count = 0;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            if (inputArray[i] < 0)
+            {
+               count++;
+            }
+
+            i++;
+         }
+
+         Console.WriteLine("В массиве {0} отрицательных элементов: {1}", nameArray, count);
+         if (count == 0)
+         {
+            Console.WriteLine("В массиве {0} нет отрицательных элементов", nameArray);
          }
 
          return count;
