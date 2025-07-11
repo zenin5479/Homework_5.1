@@ -548,17 +548,11 @@ namespace Homework_5._1
                flag = true;
             }
 
-            // Сравниваем значения double используя метод Equals(Double)
-            //if (inputArray[i].Equals(numbercomparison))
-            //{
-            //   flag = true;
-            //}
-
             // Сравниваем значения double используя оператор равенства ==
-            //if (inputArray[i] == 0)
-            //{
-            //   flag = true;
-            //}
+            if (inputArray[i] == 0)
+            {
+               flag = true;
+            }
 
             i++;
          }
@@ -613,9 +607,6 @@ namespace Homework_5._1
 
          return flag;
       }
-
-
-
 
       public static bool FindZeroDouble(double[] inputArray, string nameArray)
       {
