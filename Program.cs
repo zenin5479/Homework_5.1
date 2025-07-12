@@ -17,7 +17,7 @@ namespace Homework_5._1
       static void Main(string[] args)
       {
          string nameFileOne = "a.txt";
-         string nameFileTwo = "finish.txt";
+         //string nameFileTwo = "finish.txt";
 
          int value = EnterSetValue();
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
