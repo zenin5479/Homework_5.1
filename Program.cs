@@ -50,11 +50,11 @@ namespace Homework_5._1
             Console.WriteLine("Введите значение элемента:");
             int.TryParse(Console.ReadLine(), out v);
             //v = Convert.ToInt32(Console.ReadLine());
-            if (v <= -100 || v >= 100)
+            if (v <= -100 || v > 100)
             {
                Console.WriteLine("Введено не верное значение");
             }
-         } while (v <= -100 || v >= 100);
+         } while (v <= -100 || v > 100);
 
          return v;
       }
