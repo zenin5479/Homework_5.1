@@ -55,6 +55,7 @@ namespace Homework_5._1
             while (streamReader.Peek() >= 0)
             {
                stroka = streamReader.ReadLine();
+               //Console.WriteLine(stroka);
             }
 
             // Определение количества столбцов в строке разделением строки на подстроки по пробелу
@@ -66,6 +67,8 @@ namespace Homework_5._1
             int сolumn = 0;
             if (stroka != null)
             {
+               //Console.WriteLine("Исходный строковый массив:");
+               //Console.WriteLine(stroka);
                while (symbolСount < stroka.Length)
                {
                   if (symbolSpace == stroka[symbolСount])
@@ -81,7 +84,10 @@ namespace Homework_5._1
                   symbolСount++;
                }
 
+               //Console.WriteLine("Количество столбцов {0}", сolumn);
+
                // Разделение строки на подстроки по пробелу и конвертация подстрок в int
+               //Console.WriteLine("Одномерный целочисленный массив:");
                // Одномерный целочисленный массив
                arrayInt = new int[сolumn];
                // Построитель строк
@@ -100,6 +106,7 @@ namespace Homework_5._1
                   {
                      string subLine = stringModified.ToString();
                      arrayInt[сolumn] = Convert.ToInt32(subLine);
+                     //Console.Write(arrayInt[сolumn] + " ");
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -108,6 +115,7 @@ namespace Homework_5._1
                   {
                      string subLine = stringModified.ToString();
                      arrayInt[сolumn] = Convert.ToInt32(subLine);
+                     //Console.Write(arrayInt[сolumn]);
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -117,7 +125,7 @@ namespace Homework_5._1
             }
 
             streamReader.Close();
-            ////Console.WriteLine();
+            //Console.WriteLine();
          }
 
          return arrayInt;
