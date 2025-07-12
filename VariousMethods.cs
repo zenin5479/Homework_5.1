@@ -125,7 +125,7 @@ namespace Homework_5._1
             }
 
             streamReader.Close();
-            //Console.WriteLine();
+            Console.WriteLine();
          }
 
          return arrayInt;
