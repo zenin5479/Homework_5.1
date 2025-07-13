@@ -72,11 +72,11 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения int используя оператор равенства ==
-            //if (inputArray[i] == setValue)
-            //{
-            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-            //   return i;
-            //}
+            if (inputArray[i] == setValue)
+            {
+               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+               return i;
+            }
 
             i++;
          }
