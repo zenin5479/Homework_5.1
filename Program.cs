@@ -41,6 +41,7 @@ namespace Homework_5._1
          Console.ReadKey();
       }
 
+      // Написать метод для опраеделнния наличия величины через флаг
       bool Check(float[] x, int nx, float t)
       {
          int i = 0;
