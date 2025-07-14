@@ -34,8 +34,8 @@ namespace Homework_5._1
             Console.WriteLine(index);
             string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             string pathTwo = Path.GetFullPath(nameFileTwo);
-            //File.Create(pathTwo).Close();
-            //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+            File.Create(pathTwo).Close();
+            LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
          Console.ReadKey();
