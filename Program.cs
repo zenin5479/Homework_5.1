@@ -53,7 +53,6 @@ namespace Homework_5._1
          return fl;
       }
 
-
       public static int EnterSetValue()
       {
          int v;
