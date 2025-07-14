@@ -41,6 +41,19 @@ namespace Homework_5._1
          Console.ReadKey();
       }
 
+      bool Check(float* x, int nx, float t)
+      {
+         int i = 0;
+         bool fl = true;
+         while (i < nx && fl)
+         {
+            if (x[i] < t) i++;
+            else fl = false;
+         }
+         return fl;
+      }
+
+
       public static int EnterSetValue()
       {
          int v;
