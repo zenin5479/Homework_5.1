@@ -66,35 +66,21 @@ namespace Homework_5._1
       public static bool SearchingLastValue(int[] inputArray, int setValue)
       {
          int j = inputArray.Length;
-         while (0 < j)
+         while (j > 0)
          {
-            j--;
             Console.Write("{0} ", j);
+            j--;
          }
 
          Console.WriteLine();
-
          int n = inputArray.Length;
-         Console.Write("N = {0} \n", n);
-         int x = 0;
-         //пока i меньше или равно n
-         while (x < n)
+         while (n > 0)
          {
-            //выводим i на экран, затем увеличиваем его на 1  
-            Console.Write("{0} ", x++);
+            Console.Write("{0} ", n);
+            n--;
          }
 
          Console.WriteLine();
-
-         int z = inputArray.Length - 1;
-         while (z >= 0)
-         {
-            Console.Write("{0} ", inputArray[z]);
-            z--;
-         }
-
-         Console.WriteLine();
-
          bool flag = true;
          int i = inputArray.Length;
          while (i > 0 && flag)
