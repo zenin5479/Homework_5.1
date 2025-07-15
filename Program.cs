@@ -31,9 +31,9 @@ namespace Homework_5._1
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
             int index = SearchingSetValue(searchOne, value);
-            Console.WriteLine(index);
+            //Console.WriteLine(index);
             bool fl = SearchingLastValue(searchOne, value);
-            Console.WriteLine(fl);
+            //Console.WriteLine(fl);
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             //string pathTwo = Path.GetFullPath(nameFileTwo);
             //File.Create(pathTwo).Close();
@@ -64,16 +64,16 @@ namespace Homework_5._1
 
       public static bool SearchingLastValue(int[] inputArray, int setValue)
       {
-         //int i = 6;
-         //while (i > 0)
+         //int j = 6;
+         //while (j > 0)
          //{
-         //   Console.WriteLine(i);
-         //   i--;
+         //   Console.WriteLine(j);
+         //   j--;
          //}
 
          bool flag = true;
-         int i = 0;
-         while (inputArray.Length > i && flag)
+         int i = inputArray.Length - 1;
+         while (i > 0 && flag)
          {
             // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(setValue) == 0)
@@ -96,8 +96,8 @@ namespace Homework_5._1
             //   flag = false;
             //}
 
+            Console.WriteLine(i);
             i--;
-
          }
 
          if (flag)
@@ -134,7 +134,6 @@ namespace Homework_5._1
          return -1;
       }
 
-
       public static int EnterSetValue()
       {
          int v;
@@ -151,7 +150,5 @@ namespace Homework_5._1
 
          return v;
       }
-
-
    }
 }
