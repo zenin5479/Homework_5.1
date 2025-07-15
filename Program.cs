@@ -92,9 +92,11 @@ namespace Homework_5._1
             //   flag = false;
             //}
 
-            //Console.Write("{0} ", inputArray[i]);
+            Console.Write("{0} ", inputArray[i]);
             i--;
          }
+
+         Console.WriteLine();
 
          // Вариант 2 обход массива с последнего элемента
          //bool flag = true;
