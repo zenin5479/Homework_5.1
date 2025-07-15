@@ -64,17 +64,18 @@ namespace Homework_5._1
 
       public static bool SearchingLastValue(int[] inputArray, int setValue)
       {
-         //int j = 6;
-         //while (j > 0)
-         //{
-         //   Console.WriteLine(j);
-         //   j--;
-         //}
+         int j = inputArray.Length;
+         while (0 < j)
+         {
+            j--;
+            Console.WriteLine(j);
+         }
 
          bool flag = true;
-         int i = inputArray.Length - 1;
+         int i = inputArray.Length;
          while (i > 0 && flag)
          {
+            i--;
             // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(setValue) == 0)
             {
@@ -97,7 +98,7 @@ namespace Homework_5._1
             //}
 
             Console.WriteLine(i);
-            i--;
+
          }
 
          if (flag)
