@@ -70,7 +70,7 @@ namespace Homework_5._1
          //   Console.WriteLine(i);
          //   i--;
          //}
-         
+
          bool flag = true;
          int i = 0;
          while (inputArray.Length > i && flag)
