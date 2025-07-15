@@ -30,10 +30,10 @@ namespace Homework_5._1
          else
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
-            int index = SearchingLastSetValue(searchOne, value);
-            Console.WriteLine(index);
-            //bool fl = SearchingLastValue(searchOne, value);
-            //Console.WriteLine(fl);
+            //int index = SearchingLastSetValue(searchOne, value);
+            //Console.WriteLine(index);
+            bool fl = SearchingLastValue(searchOne, value);
+            Console.WriteLine(fl);
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             //string pathTwo = Path.GetFullPath(nameFileTwo);
             //File.Create(pathTwo).Close();
