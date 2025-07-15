@@ -43,7 +43,7 @@ namespace Homework_5._1
 
       public static bool SearchingValue(int[] inputArray, int setValue)
       {
-         bool fl = false;
+         bool fl = true;
          int i = 0;
          while (i < inputArray.Length)
          {
@@ -51,14 +51,14 @@ namespace Homework_5._1
             if (inputArray[i].CompareTo(setValue) == 0)
             {
                Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-               fl = true;
+               fl = false;
             }
 
             // Сравниваем значения int используя оператор равенства ==
             if (inputArray[i] == setValue)
             {
                Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-               fl = true;
+               fl = false;
             }
 
             i++;
