@@ -96,7 +96,7 @@ namespace Homework_5._1
             i--;
          }
 
-         Console.WriteLine();
+         //Console.WriteLine();
 
          // Вариант 2 обход массива с последнего элемента
          //bool flag = true;
