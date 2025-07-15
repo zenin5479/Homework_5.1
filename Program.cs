@@ -30,6 +30,7 @@ namespace Homework_5._1
          else
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
+            //Console.WriteLine();
             //int index = SearchingSetValue(searchOne, value);
             //Console.WriteLine(index);
             bool fl = SearchingLastValue(searchOne, value);
@@ -65,7 +66,6 @@ namespace Homework_5._1
       public static bool SearchingLastValue(int[] inputArray, int setValue)
       {
          // Поиск элемента строки (c флагом bool)
-
          // Вариант 1 обход массива с последнего элемента
          bool flag = true;
          int i = inputArray.Length - 1;
@@ -129,7 +129,7 @@ namespace Homework_5._1
          //   Console.Write("{0} ", inputArray[i]);
          //}
 
-         //Console.WriteLine();
+         Console.WriteLine();
          if (flag)
          {
             Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
