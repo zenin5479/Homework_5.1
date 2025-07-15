@@ -67,29 +67,29 @@ namespace Homework_5._1
       {
          // Поиск элемента строки (c флагом bool)
 
-         // Вариант 1
+         // Вариант 1 обход массива с последнего элемента
          bool flag = true;
          int i = inputArray.Length - 1;
          while (i >= 0 && flag)
          {
-            // Сравниваем значения int используя метод CompareTo(Int) 
-            if (inputArray[i].CompareTo(setValue) == 0)
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == setValue)
             {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
                flag = false;
             }
 
-            // Сравниваем значения int используя метод Equals(Int)
-            //if (inputArray[i].Equals(setValue))
+            // Сравниваем значения int используя метод CompareTo(Int) 
+            //if (inputArray[i].CompareTo(setValue) == 0)
             //{
             //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
             //   flag = false;
             //}
 
-            // Сравниваем значения int используя оператор равенства ==
-            //if (inputArray[i] == setValue)
+            // Сравниваем значения int используя метод Equals(Int)
+            //if (inputArray[i].Equals(setValue))
             //{
-            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+            //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
             //   flag = false;
             //}
 
@@ -106,7 +106,7 @@ namespace Homework_5._1
 
          }
 
-         // Вариант 2
+         // Вариант 2 обход массива с последнего элемента
          //bool flag = true;
          //int i = inputArray.Length;
          //while (i > 0 && flag)
