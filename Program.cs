@@ -65,7 +65,7 @@ namespace Homework_5._1
       public static bool SearchingLastValue(int[] inputArray, int setValue)
       {
          bool flag = true;
-         int i = inputArray.Length;
+         int i = inputArray.Length - 1;
          while (0 < i && flag)
          {
             // Сравниваем значения int используя метод CompareTo(Int) 
