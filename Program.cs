@@ -30,9 +30,9 @@ namespace Homework_5._1
          else
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
-            //int index = SearchingSetValue(searchOne, value);
-            //Console.WriteLine(index);
-            bool fl = SearchingLastValue(searchOne, value);
+            int index = SearchingSetValue(searchOne, value);
+            Console.WriteLine(index);
+            //bool fl = SearchingLastValue(searchOne, value);
             //Console.WriteLine(fl);
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             //string pathTwo = Path.GetFullPath(nameFileTwo);
@@ -92,17 +92,17 @@ namespace Homework_5._1
          int i = 0;
          while (i < inputArray.Length)
          {
-            // Сравниваем значения int используя метод CompareTo(Int) 
-            if (inputArray[i].CompareTo(setValue) == 0)
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == setValue)
             {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
                return i;
             }
 
-            // Сравниваем значения int используя оператор равенства ==
-            //if (inputArray[i] == setValue)
+            // Сравниваем значения int используя метод CompareTo(Int) 
+            //if (inputArray[i].CompareTo(setValue) == 0)
             //{
-            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+            //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
             //   return i;
             //}
 
