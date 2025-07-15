@@ -80,6 +80,14 @@ namespace Homework_5._1
             //выводим i на экран, затем увеличиваем его на 1  
             Console.WriteLine(x++);
          }
+         
+         int z = inputArray.Length - 1;
+         while (z >= 0)
+         {
+            Console.WriteLine(inputArray[z]);
+            z--;
+         }
+
 
          bool flag = true;
          int i = inputArray.Length;
