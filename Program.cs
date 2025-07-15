@@ -129,7 +129,7 @@ namespace Homework_5._1
          //   Console.Write("{0} ", inputArray[i]);
          //}
 
-         Console.WriteLine();
+         //Console.WriteLine();
          if (flag)
          {
             Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
