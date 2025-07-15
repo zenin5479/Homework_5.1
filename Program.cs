@@ -80,20 +80,20 @@ namespace Homework_5._1
             }
 
             // Сравниваем значения int используя метод Equals(Int)
-            if (inputArray[i].Equals(setValue))
-            {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-               flag = false;
-            }
+            //if (inputArray[i].Equals(setValue))
+            //{
+            //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+            //   flag = false;
+            //}
 
             // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-               flag = false;
-            }
+            //if (inputArray[i] == setValue)
+            //{
+            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+            //   flag = false;
+            //}
 
-            Console.Write("{0} ", inputArray[i]);
+            //Console.Write("{0} ", inputArray[i]);
             i--;
          }
 
