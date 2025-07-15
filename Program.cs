@@ -41,7 +41,35 @@ namespace Homework_5._1
          Console.ReadKey();
       }
 
-      // Написать метод для опраеделнния наличия величины через флаг
+      public static bool SearchingValue(int[] inputArray, int setValue)
+      {
+         bool fl = false;
+         int i = 0;
+         while (i < inputArray.Length)
+         {
+            // Сравниваем значения int используя метод CompareTo(Int) 
+            if (inputArray[i].CompareTo(setValue) == 0)
+            {
+               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               fl = true;
+               //return fl;
+            }
+
+            // Сравниваем значения int используя оператор равенства ==
+            //if (inputArray[i] == setValue)
+            //{
+            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+            //   return i;
+            //}
+
+            i++;
+         }
+
+         Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
+         return fl;
+      }
+
+      // Написать метод для определнния наличия величины через флаг
       bool Check(float[] x, int nx, float t)
       {
          int i = 0;
