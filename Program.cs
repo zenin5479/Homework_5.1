@@ -71,9 +71,12 @@ namespace Homework_5._1
          int i = inputArray.Length - 1;
          while (i >= 0 && flag)
          {
+            Console.Write("{0} ", inputArray[i]);
+
             // Сравниваем значения int используя оператор равенства ==
             if (inputArray[i] == setValue)
             {
+               Console.WriteLine();
                Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
                flag = false;
             }
@@ -92,7 +95,7 @@ namespace Homework_5._1
             //   flag = false;
             //}
 
-            Console.Write("{0} ", inputArray[i]);
+            
             i--;
          }
 
