@@ -30,7 +30,6 @@ namespace Homework_5._1
          else
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
-            //Console.WriteLine();
             //int index = SearchingSetValue(searchOne, value);
             //Console.WriteLine(index);
             bool fl = SearchingLastValue(searchOne, value);
