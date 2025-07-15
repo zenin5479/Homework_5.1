@@ -69,15 +69,15 @@ namespace Homework_5._1
             // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(setValue) == 0)
             {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
                flag = false;
+               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
             }
 
             // Сравниваем значения int используя метод Equals(Int)
             if (inputArray[i].Equals(setValue))
             {
                flag = true;
-
+               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
             }
 
             // Сравниваем значения int используя оператор равенства ==
