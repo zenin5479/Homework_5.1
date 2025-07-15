@@ -52,15 +52,14 @@ namespace Homework_5._1
             {
                Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
                fl = true;
-               //return fl;
             }
 
             // Сравниваем значения int используя оператор равенства ==
-            //if (inputArray[i] == setValue)
-            //{
-            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-            //   return i;
-            //}
+            if (inputArray[i] == setValue)
+            {
+               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+               fl = true;
+            }
 
             i++;
          }
@@ -76,8 +75,14 @@ namespace Homework_5._1
          bool fl = true;
          while (i < nx && fl)
          {
-            if (x[i] < t) i++;
-            else fl = false;
+            if (x[i] < t)
+            {
+               i++;
+            }
+            else
+            {
+               fl = false;
+            }
          }
          return fl;
       }
