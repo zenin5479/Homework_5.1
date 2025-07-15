@@ -32,6 +32,8 @@ namespace Homework_5._1
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
             int index = SearchingSetValue(searchOne, value);
             Console.WriteLine(index);
+            bool fl = SearchingLastValue(searchOne, value);
+            Console.WriteLine(fl);
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             //string pathTwo = Path.GetFullPath(nameFileTwo);
             //File.Create(pathTwo).Close();
@@ -60,41 +62,41 @@ namespace Homework_5._1
          return fl;
       }
 
-      public static bool SearchingSetValueBool(int[] inputArray, int setValue)
+      public static bool SearchingLastValue(int[] inputArray, int setValue)
       {
          bool flag = true;
-         int i = 0;
-         while (i < inputArray.Length && flag)
+         int i = inputArray.Length;
+         while (0 < i && flag)
          {
             // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(setValue) == 0)
             {
-               flag = false;
                Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               flag = false;
             }
 
             // Сравниваем значения int используя метод Equals(Int)
-            if (inputArray[i].Equals(setValue))
-            {
-               flag = true;
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-            }
+            //if (inputArray[i].Equals(setValue))
+            //{
+            //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+            //   flag = false;
+            //}
 
             // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-               flag = false;
-            }
+            //if (inputArray[i] == setValue)
+            //{
+            //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+            //   flag = false;
+            //}
 
-            i++;
+            i--;
          }
 
          if (flag)
          {
             Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
          }
-         
+
          return flag;
       }
 
