@@ -68,11 +68,11 @@ namespace Homework_5._1
          while (0 < j)
          {
             j--;
-            Console.WriteLine(j);
+            Console.Write("{0} ", j);
          }
 
          int n = inputArray.Length;
-         Console.WriteLine("N = {0}", n);
+         Console.Write("N = {0} ", n);
          int x = 0;
          //пока i меньше или равно n
          while (x < n)
@@ -80,14 +80,13 @@ namespace Homework_5._1
             //выводим i на экран, затем увеличиваем его на 1  
             Console.WriteLine(x++);
          }
-         
+
          int z = inputArray.Length - 1;
          while (z >= 0)
          {
-            Console.WriteLine(inputArray[z]);
+            Console.Write("{0} ", inputArray[z]);
             z--;
          }
-
 
          bool flag = true;
          int i = inputArray.Length;
