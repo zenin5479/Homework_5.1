@@ -72,12 +72,13 @@ namespace Homework_5._1
                Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
                flag = false;
             }
-            
-            // Сравниваем значения double используя метод Equals(Double)
-            //if (inputArray[i].Equals(numbercomparison))
-            //{
-            //   flag = true;
-            //}
+
+            // Сравниваем значения int используя метод Equals(Int)
+            if (inputArray[i].Equals(setValue))
+            {
+               flag = true;
+
+            }
 
             // Сравниваем значения int используя оператор равенства ==
             if (inputArray[i] == setValue)
