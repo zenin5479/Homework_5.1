@@ -41,7 +41,26 @@ namespace Homework_5._1
          Console.ReadKey();
       }
 
-      public static bool SearchingValue(int[] inputArray, int setValue)
+      // Написать метод для определнния наличия величины через флаг
+      public static bool Check(int[] inputArray, int setValue)
+      {
+         int i = 0;
+         bool fl = true;
+         while (i < inputArray.Length && fl)
+         {
+            if (inputArray[i].Equals(setValue))
+            {
+               fl = false;
+            }
+            else
+            {
+               i++;
+            }
+         }
+         return fl;
+      }
+
+      public static bool SearchingSetValueBool(int[] inputArray, int setValue)
       {
          bool fl = true;
          int i = 0;
@@ -66,42 +85,6 @@ namespace Homework_5._1
 
          Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
          return fl;
-      }
-
-      // Написать метод для определнния наличия величины через флаг
-      public static bool Check(int[] x, int nx, float t)
-      {
-         int i = 0;
-         bool fl = true;
-         while (i < nx && fl)
-         {
-            if (x[i] < t)
-            {
-               i++;
-            }
-            else
-            {
-               fl = false;
-            }
-         }
-         return fl;
-      }
-
-      public static int EnterSetValue()
-      {
-         int v;
-         do
-         {
-            Console.WriteLine("Введите значение элемента:");
-            int.TryParse(Console.ReadLine(), out v);
-            //v = Convert.ToInt32(Console.ReadLine());
-            if (v <= -100 || v >= 100)
-            {
-               Console.WriteLine("Введено не верное значение");
-            }
-         } while (v <= -100 || v >= 100);
-
-         return v;
       }
 
       public static int SearchingSetValue(int[] inputArray, int setValue)
@@ -129,5 +112,25 @@ namespace Homework_5._1
          Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
          return -1;
       }
+
+
+      public static int EnterSetValue()
+      {
+         int v;
+         do
+         {
+            Console.WriteLine("Введите значение элемента:");
+            int.TryParse(Console.ReadLine(), out v);
+            //v = Convert.ToInt32(Console.ReadLine());
+            if (v <= -100 || v >= 100)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (v <= -100 || v >= 100);
+
+         return v;
+      }
+
+
    }
 }
