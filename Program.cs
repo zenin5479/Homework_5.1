@@ -68,7 +68,7 @@ namespace Homework_5._1
          int j = inputArray.Length;
          while (j > 0)
          {
-            Console.Write("{0} ", j);
+            Console.Write("{0} ", inputArray[j]);
             j--;
          }
 
@@ -76,7 +76,7 @@ namespace Homework_5._1
          int n = inputArray.Length;
          while (n > 0)
          {
-            Console.Write("{0} ", n);
+            Console.Write("{0} ", inputArray[inputArray[n]]);
             n--;
          }
 
@@ -107,7 +107,7 @@ namespace Homework_5._1
             //   flag = false;
             //}
 
-            Console.Write("{0} ", i);
+            Console.Write("{0} ", inputArray[i]);
          }
 
          Console.WriteLine();
