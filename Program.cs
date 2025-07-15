@@ -45,7 +45,7 @@ namespace Homework_5._1
       {
          bool fl = true;
          int i = 0;
-         while (i < inputArray.Length)
+         while (i < inputArray.Length && fl)
          {
             // Сравниваем значения int используя метод CompareTo(Int) 
             if (inputArray[i].CompareTo(setValue) == 0)
