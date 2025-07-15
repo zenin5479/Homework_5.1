@@ -69,7 +69,7 @@ namespace Homework_5._1
       }
 
       // Написать метод для определнния наличия величины через флаг
-      public bool Check(int[] x, int nx, float t)
+      public static bool Check(int[] x, int nx, float t)
       {
          int i = 0;
          bool fl = true;
