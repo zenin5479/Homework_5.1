@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 
 // Поиск экстремального элемента, удовлетворяющего нескольким условиям
 // В данной задаче необходимо сначала найти номер элемента, удовлетворяющего одному условию,
@@ -71,15 +72,19 @@ namespace Homework_5._1
             Console.Write("{0} ", j);
          }
 
+         Console.WriteLine();
+
          int n = inputArray.Length;
-         Console.Write("N = {0} ", n);
+         Console.Write("N = {0} \n", n);
          int x = 0;
          //пока i меньше или равно n
          while (x < n)
          {
             //выводим i на экран, затем увеличиваем его на 1  
-            Console.WriteLine(x++);
+            Console.Write("{0} ", x++);
          }
+
+         Console.WriteLine();
 
          int z = inputArray.Length - 1;
          while (z >= 0)
@@ -87,6 +92,8 @@ namespace Homework_5._1
             Console.Write("{0} ", inputArray[z]);
             z--;
          }
+
+         Console.WriteLine();
 
          bool flag = true;
          int i = inputArray.Length;
@@ -114,9 +121,10 @@ namespace Homework_5._1
             //   flag = false;
             //}
 
-            Console.WriteLine(i);
+            Console.Write("{0} ", i);
          }
 
+         Console.WriteLine();
          if (flag)
          {
             Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
