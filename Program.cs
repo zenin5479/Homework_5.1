@@ -30,7 +30,7 @@ namespace Homework_5._1
          else
          {
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
-            int index = SearchingSetValue(searchOne, value);
+            //int index = SearchingSetValue(searchOne, value);
             //Console.WriteLine(index);
             bool fl = SearchingLastValue(searchOne, value);
             //Console.WriteLine(fl);
@@ -71,6 +71,16 @@ namespace Homework_5._1
             Console.WriteLine(j);
          }
 
+         int n = inputArray.Length;
+         Console.WriteLine("N = {0}", n);
+         int x = 0;
+         //пока i меньше или равно n
+         while (x < n)
+         {
+            //выводим i на экран, затем увеличиваем его на 1  
+            Console.WriteLine(x++);
+         }
+
          bool flag = true;
          int i = inputArray.Length;
          while (i > 0 && flag)
@@ -98,7 +108,6 @@ namespace Homework_5._1
             //}
 
             Console.WriteLine(i);
-
          }
 
          if (flag)
