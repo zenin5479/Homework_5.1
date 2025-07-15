@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.InteropServices;
 
 // Поиск экстремального элемента, удовлетворяющего нескольким условиям
 // В данной задаче необходимо сначала найти номер элемента, удовлетворяющего одному условию,
@@ -68,10 +67,42 @@ namespace Homework_5._1
          // Поиск элемента строки (c флагом bool)
 
          // Вариант 1 обход массива с последнего элемента
+         //bool flag = true;
+         //int i = inputArray.Length - 1;
+         //while (i >= 0 && flag)
+         //{
+         //   // Сравниваем значения int используя оператор равенства ==
+         //   if (inputArray[i] == setValue)
+         //   {
+         //      Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
+         //      flag = false;
+         //   }
+
+         //   // Сравниваем значения int используя метод CompareTo(Int) 
+         //   //if (inputArray[i].CompareTo(setValue) == 0)
+         //   //{
+         //   //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+         //   //   flag = false;
+         //   //}
+
+         //   // Сравниваем значения int используя метод Equals(Int)
+         //   //if (inputArray[i].Equals(setValue))
+         //   //{
+         //   //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+         //   //   flag = false;
+         //   //}
+
+         //   //Console.Write("{0} ", inputArray[i]);
+         //   i--;
+         //}
+
+         // Вариант 2 обход массива с последнего элемента
          bool flag = true;
-         int i = inputArray.Length - 1;
-         while (i >= 0 && flag)
+         int i = inputArray.Length;
+         while (i > 0 && flag)
          {
+            i--;
+
             // Сравниваем значения int используя оператор равенства ==
             if (inputArray[i] == setValue)
             {
@@ -93,48 +124,8 @@ namespace Homework_5._1
             //   flag = false;
             //}
 
-            //Console.Write("{0} ", inputArray[i]);
-            i--;
+            Console.Write("{0} ", inputArray[i]);
          }
-
-         Console.WriteLine();
-         int n = inputArray.Length;
-         while (n > 0)
-         {
-            n--;
-            Console.Write("{0} ", inputArray[n]);
-
-         }
-
-         // Вариант 2 обход массива с последнего элемента
-         //bool flag = true;
-         //int i = inputArray.Length;
-         //while (i > 0 && flag)
-         //{
-         //   i--;
-         //   // Сравниваем значения int используя метод CompareTo(Int) 
-         //   if (inputArray[i].CompareTo(setValue) == 0)
-         //   {
-         //      Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-         //      flag = false;
-         //   }
-
-         //   // Сравниваем значения int используя метод Equals(Int)
-         //   //if (inputArray[i].Equals(setValue))
-         //   //{
-         //   //   Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-         //   //   flag = false;
-         //   //}
-
-         //   // Сравниваем значения int используя оператор равенства ==
-         //   //if (inputArray[i] == setValue)
-         //   //{
-         //   //   Console.WriteLine("В массиве найден необходимый элемент {0} по индексу: {1}", setValue, i);
-         //   //   flag = false;
-         //   //}
-
-         //   Console.Write("{0} ", inputArray[i]);
-         //}
 
          Console.WriteLine();
          if (flag)
