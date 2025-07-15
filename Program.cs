@@ -100,7 +100,7 @@ namespace Homework_5._1
                return i;
             }
 
-            i++;
+            i--;
          }
 
          Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
