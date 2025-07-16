@@ -49,36 +49,40 @@ namespace Homework_5._1
             }
 
             Console.WriteLine("Максимальное среди отрицательных: " + max);
-         }
 
-         // Шаг 1: Создаем массив
-         int[] array = { 3, -1, -4, 2, -5, 0, -2, 7 };
 
-         // Шаг 2: Инициализируем переменную для максимума
-         int? maxNegative = null;
 
-         // Шаг 3: Перебираем элементы массива
-         foreach (int num in array)
-         {
-            if (num < 0) // Проверяем, является ли элемент отрицательным
+            // Шаг 2: Инициализируем переменную для максимума
+            int? maxNegative = null;
+
+            // Шаг 3: Перебираем элементы массива
+            for (var i = 0; i < searchOne.Length; i++)
             {
-               // Шаг 4: Обновляем максимум
-               if (maxNegative == null || num > maxNegative)
+               int num = searchOne[i];
+               if (num < 0) // Проверяем, является ли элемент отрицательным
                {
-                  maxNegative = num;
+                  // Шаг 4: Обновляем максимум
+                  if (maxNegative == null || num > maxNegative)
+                  {
+                     maxNegative = num;
+                  }
                }
             }
+
+            // Шаг 5: Выводим результат
+            if (maxNegative.HasValue)
+            {
+               Console.WriteLine("Максимум из отрицательных элементов: " + maxNegative);
+            }
+            else
+            {
+               Console.WriteLine("В массиве нет отрицательных элементов.");
+            }
+
          }
 
-         // Шаг 5: Выводим результат
-         if (maxNegative.HasValue)
-         {
-            Console.WriteLine("Максимум из отрицательных элементов: " + maxNegative);
-         }
-         else
-         {
-            Console.WriteLine("В массиве нет отрицательных элементов.");
-         }
+
+
 
 
          Console.ReadKey();
