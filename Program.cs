@@ -135,7 +135,6 @@ namespace Homework_5._1
          return v;
       }
 
-      //   setlocale(LC_ALL, "Russian");
       //   int t;
       //   double istart, mina;
       //   bool fl = false;
