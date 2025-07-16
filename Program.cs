@@ -138,7 +138,6 @@ namespace Homework_5._1
       //delete[] a;
       //return 0;
 
-      // Написать метод для определнния наличия величины через флаг
       public static bool Check(int[] inputArray, int setValue)
       {
          int i = 0;
@@ -218,7 +217,5 @@ namespace Homework_5._1
 
          return v;
       }
-
-
    }
 }
