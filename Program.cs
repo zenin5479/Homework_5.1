@@ -39,6 +39,7 @@ namespace Homework_5._1
             //File.Create(pathTwo).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
 
+            // Минимальный элемент массива
             int max = searchOne[0];
             for (int i = 1; i < searchOne.Length; i++)
             {
