@@ -54,87 +54,6 @@ namespace Homework_5._1
          Console.ReadKey();
       }
 
-      // Написать метод для определнния наличия величины через флаг
-      public static bool Check(int[] inputArray, int setValue)
-      {
-         int i = 0;
-         bool fl = true;
-         while (i < inputArray.Length && fl)
-         {
-            if (inputArray[i].Equals(setValue))
-            {
-               fl = false;
-            }
-            else
-            {
-               i++;
-            }
-         }
-         return fl;
-      }
-
-      public static bool SearchingLastValue(int[] inputArray, int setValue)
-      {
-         // Поиск элемента строки (c флагом bool) обход массива с последнего элемента
-         bool flag = true;
-         int i = inputArray.Length - 1;
-         while (i >= 0 && flag)
-         {
-            // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-               flag = false;
-            }
-
-            i--;
-         }
-
-         if (flag)
-         {
-            Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
-         }
-
-         return flag;
-      }
-
-      public static int SearchingLastSetValue(int[] inputArray, int setValue)
-      {
-         // Поиск элемента строки обход массива с последнего элемента
-         int i = inputArray.Length - 1;
-         while (i >= 0)
-         {
-            // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-               return i;
-            }
-
-            i--;
-         }
-
-         Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
-         return -1;
-      }
-
-      public static int EnterSetValue()
-      {
-         int v;
-         do
-         {
-            Console.WriteLine("Введите значение элемента:");
-            int.TryParse(Console.ReadLine(), out v);
-            //v = Convert.ToInt32(Console.ReadLine());
-            if (v <= -100 || v >= 100)
-            {
-               Console.WriteLine("Введено не верное значение");
-            }
-         } while (v <= -100 || v >= 100);
-
-         return v;
-      }
-
       //   int t;
       //   double istart, mina;
       //   bool fl = false;
@@ -218,5 +137,88 @@ namespace Homework_5._1
       //}
       //delete[] a;
       //return 0;
+
+      // Написать метод для определнния наличия величины через флаг
+      public static bool Check(int[] inputArray, int setValue)
+      {
+         int i = 0;
+         bool fl = true;
+         while (i < inputArray.Length && fl)
+         {
+            if (inputArray[i].Equals(setValue))
+            {
+               fl = false;
+            }
+            else
+            {
+               i++;
+            }
+         }
+         return fl;
+      }
+
+      public static bool SearchingLastValue(int[] inputArray, int setValue)
+      {
+         // Поиск элемента строки (c флагом bool) обход массива с последнего элемента
+         bool flag = true;
+         int i = inputArray.Length - 1;
+         while (i >= 0 && flag)
+         {
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == setValue)
+            {
+               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               flag = false;
+            }
+
+            i--;
+         }
+
+         if (flag)
+         {
+            Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
+         }
+
+         return flag;
+      }
+
+      public static int SearchingLastSetValue(int[] inputArray, int setValue)
+      {
+         // Поиск элемента строки обход массива с последнего элемента
+         int i = inputArray.Length - 1;
+         while (i >= 0)
+         {
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == setValue)
+            {
+               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               return i;
+            }
+
+            i--;
+         }
+
+         Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
+         return -1;
+      }
+
+      public static int EnterSetValue()
+      {
+         int v;
+         do
+         {
+            Console.WriteLine("Введите значение элемента:");
+            int.TryParse(Console.ReadLine(), out v);
+            //v = Convert.ToInt32(Console.ReadLine());
+            if (v <= -100 || v >= 100)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (v <= -100 || v >= 100);
+
+         return v;
+      }
+
+
    }
 }
