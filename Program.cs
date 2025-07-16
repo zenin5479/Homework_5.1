@@ -38,7 +38,24 @@ namespace Homework_5._1
             //string pathTwo = Path.GetFullPath(nameFileTwo);
             //File.Create(pathTwo).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+
+            int max = searchOne[0];
+            for (int i = 1; i < searchOne.Length; i++)
+            {
+               if (searchOne[i] < 0 && searchOne[i] > max)
+               {
+                  max = searchOne[i];
+               }
+            }
+
+            Console.WriteLine("Максимальное среди отрицательных: " + max);
+
          }
+
+
+
+
+
 
          Console.ReadKey();
       }
