@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Xml.Linq;
 
 // Поиск экстремального элемента, удовлетворяющего нескольким условиям
 // В данной задаче необходимо сначала найти номер элемента, удовлетворяющего одному условию,
@@ -39,7 +40,7 @@ namespace Homework_5._1
             //File.Create(pathTwo).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
 
-            int max = searchOne[0];
+            int max = 0;
             for (int i = 1; i < searchOne.Length; i++)
             {
                if (searchOne[i] < 0 && searchOne[i] > max)
@@ -51,25 +52,20 @@ namespace Homework_5._1
             Console.WriteLine("Максимальное среди отрицательных: " + max);
 
             // Инициализируем переменную для максимума
-            int? maxNegative = null;
-
+            int maxNegative = 0;
             // Перебираем элементы массива
-            for (var i = 0; i < searchOne.Length; i++)
+            for (int i = 0; i < searchOne.Length; i++)
             {
-               int num = searchOne[i];
                // Проверяем, является ли элемент отрицательным
-               if (num < 0) 
+               if (searchOne[i] < 0 && searchOne[i] > maxNegative)
                {
                   // Обновляем максимум
-                  if (maxNegative == null || num > maxNegative)
-                  {
-                     maxNegative = num;
-                  }
+                  maxNegative = searchOne[i];
                }
             }
 
             // Выводим результат
-            if (maxNegative.HasValue)
+            if (maxNegative < 0)
             {
                Console.WriteLine("Максимум из отрицательных элементов: " + maxNegative);
             }
