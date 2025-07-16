@@ -50,34 +50,30 @@ namespace Homework_5._1
             }
 
             Console.WriteLine("Максимальное среди отрицательных: " + max);
-
-            // Инициализируем переменную для максимума
-            int maxNegative = 0;
-            // Перебираем элементы массива
-            for (int i = 0; i < searchOne.Length; i++)
-            {
-               // Проверяем, является ли элемент отрицательным
-               if (searchOne[i] < 0 && searchOne[i] > maxNegative)
-               {
-                  // Обновляем максимум
-                  maxNegative = searchOne[i];
-               }
-            }
-
-            // Выводим результат
-            if (maxNegative < 0)
-            {
-               Console.WriteLine("Максимум из отрицательных элементов: " + maxNegative);
-            }
-            else
-            {
-               Console.WriteLine("В массиве нет отрицательных элементов.");
-            }
-
          }
 
          Console.ReadKey();
       }
+
+      public int Max_negative()
+      {
+         int i, max = 0;
+         for (i = 0; i < msv.Length; i++)
+            if (msv[i] < 0)
+            {
+               max = msv[i];
+               break;
+            }
+         for (; i < msv.GetLength(0); i++)
+         {
+            if (msv[i] < 0 && msv[i] > max)
+            {
+               max = msv[i];
+            }
+         }
+         return max;
+      }
+
 
       // Написать метод для определнния наличия величины через флаг
       public static bool Check(int[] inputArray, int setValue)
