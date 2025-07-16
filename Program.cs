@@ -46,6 +46,7 @@ namespace Homework_5._1
                {
                   max = searchOne[i];
                }
+
             }
 
             Console.WriteLine("Максимальное среди отрицательных: " + max);
