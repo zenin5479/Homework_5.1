@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Xml.Linq;
 
 // Поиск экстремального элемента, удовлетворяющего нескольким условиям
 // В данной задаче необходимо сначала найти номер элемента, удовлетворяющего одному условию,
@@ -54,26 +53,6 @@ namespace Homework_5._1
 
          Console.ReadKey();
       }
-
-      public int Max_negative()
-      {
-         int i, max = 0;
-         for (i = 0; i < msv.Length; i++)
-            if (msv[i] < 0)
-            {
-               max = msv[i];
-               break;
-            }
-         for (; i < msv.GetLength(0); i++)
-         {
-            if (msv[i] < 0 && msv[i] > max)
-            {
-               max = msv[i];
-            }
-         }
-         return max;
-      }
-
 
       // Написать метод для определнния наличия величины через флаг
       public static bool Check(int[] inputArray, int setValue)
