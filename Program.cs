@@ -39,44 +39,19 @@ namespace Homework_5._1
             //File.Create(pathTwo).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
 
-            int max = 0;
+            int max = searchOne[0];
             for (int i = 1; i < searchOne.Length; i++)
             {
-               if (searchOne[i] < 0 && searchOne[i] > max)
+               if (searchOne[i] < 0)
                {
-                  max = searchOne[i];
-               }
-            }
-
-            Console.WriteLine("Максимальное среди отрицательных: " + max);
-
-            // Инициализируем переменную для максимума
-            int maxNegative = 0;
-
-            // Перебираем элементы массива
-            for (var i = 0; i < searchOne.Length; i++)
-            {
-               int num = searchOne[i];
-               // Проверяем, является ли элемент отрицательным
-               if (num < 0)
-               {
-                  // Обновляем максимум
-                  if (maxNegative == 0 || num > maxNegative)
+                  if (searchOne[i] < max)
                   {
-                     maxNegative = num;
+                     max = searchOne[i];
                   }
                }
             }
 
-            // Выводим результат
-            if (maxNegative != 0)
-            {
-               Console.WriteLine("Максимум из отрицательных элементов: " + maxNegative);
-            }
-            else
-            {
-               Console.WriteLine("В массиве нет отрицательных элементов.");
-            }
+            Console.WriteLine("Максимальное среди отрицательных: " + max);
          }
 
          Console.ReadKey();
