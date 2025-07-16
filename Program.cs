@@ -134,5 +134,90 @@ namespace Homework_5._1
 
          return v;
       }
+
+      //   setlocale(LC_ALL, "Russian");
+      //   int t;
+      //   double istart, mina;
+      //   bool fl = false;
+      //   printf("Введите величину t\n");
+      //   scanf("%d", &t);
+      //   double* a;
+      //   int n;
+      //      do
+      //   {
+      //      printf("Введите количество элементов массива А\n");
+      //      scanf("%d", &n);
+      //      if (n <= 0 || n >= 20)
+      //      {
+      //         printf("Введено неверное значение\n");
+      //      }
+      //   } while (n <= 0 || n >= 20) ;
+      //a = new double[n];
+      //printf("Задайте элементы массива А\n");
+      //for (int i = 0; i < n; i++)
+      //   scanf("%lf", &a[i]);
+      //printf("Массив: ");
+      //for (int i = 0; i < n; i++)
+      //   printf("%lf ", a[i]);
+      //istart = a[0];
+      //int i = n - 1;
+      //while (i > -1 and fl == false)
+      //{
+      //   if (a[i] == t)
+      //   {
+      //      fl = true;
+      //   }
+      //   else
+      //   {
+      //      i = i - 1;
+      //   }
+      //}
+
+      //if (fl == true)
+      //{
+      //   istart = i;
+      //   printf("\nНомер элемента равный t: %f", istart);
+      //}
+      //if (fl == false)
+      //{
+      //   printf("\nЧисла равного t нет\n");
+      //   istart = n - 1; // зачем уменьшаем число элементов????
+      //   //istart = n;
+      //}
+      //mina = a[0];
+      //for (int k = 0; k < n; k++)
+      //{
+      //   if (a[k] < mina)
+      //   {
+      //      mina = a[k];
+      //   }
+      //}
+      //if (mina > 0)
+      //{
+      //   fl = false;
+      //   printf("Отрицательных элементов нет\n");
+      //}
+      //else
+      //{
+      //   fl = true;
+      //}
+      //i = 0;
+      //while (i < istart and fl == true)
+      //{
+      //   if (a[i] < 0)
+      //   {
+      //      if (a[i] > mina)
+      //      {
+      //         mina = a[i];
+      //      }
+      //   }
+      //   i++;
+      //}
+      //if (fl == true)
+      //{
+      //   printf("\nМаксимум %f \n", mina);
+      //}
+      //delete[] a;
+      //return 0;
    }
 }
