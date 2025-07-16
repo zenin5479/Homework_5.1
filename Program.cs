@@ -80,8 +80,6 @@ namespace Homework_5._1
 
          }
 
-
-
          Console.ReadKey();
       }
 
