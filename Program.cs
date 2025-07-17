@@ -39,7 +39,7 @@ namespace Homework_5._1
             //File.Create(pathTwo).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
 
-            // Максимальный элемент массива среди отрицательных
+            // Минимальный элемент массива среди отрицательных
             int max = searchOne[0];
             for (int i = 1; i < searchOne.Length; i++)
             {
@@ -52,7 +52,7 @@ namespace Homework_5._1
                }
             }
 
-            Console.WriteLine("Максимальный элемент массива среди отрицательных: " + max);
+            Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
 
             // Поиск максимального и минимального элемента строки (без флагов bool)
             // Cчитаем, что максимум - это первый элемент строки
