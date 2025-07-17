@@ -163,8 +163,6 @@ namespace Homework_5._1
       //{
       //   printf("\nМаксимум %f \n", mina);
       //}
-      //delete[] a;
-      //return 0;
 
       public static bool Check(int[] inputArray, int setValue)
       {
