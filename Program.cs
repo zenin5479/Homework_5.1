@@ -173,31 +173,31 @@ namespace Homework_5._1
          bool fl = true;
          while (i < inputArray.Length && fl)
          {
-            if (inputArray[i] < setValue)
-            {
-               i++;
-            }
-            else
+            if (inputArray[i] == setValue)
             {
                fl = false;
             }
+            else
+            {
+               i++;
+            }
          }
-
          return fl;
 
          //int i = 0;
          //bool fl = true;
          //while (i < inputArray.Length && fl)
          //{
-         //   if (inputArray[i] == setValue)
-         //   {
-         //      fl = false;
-         //   }
-         //   else
+         //   if (inputArray[i] < setValue)
          //   {
          //      i++;
          //   }
+         //   else
+         //   {
+         //      fl = false;
+         //   }
          //}
+
          //return fl;
       }
 
