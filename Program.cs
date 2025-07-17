@@ -52,6 +52,91 @@ namespace Homework_5._1
                }
             }
 
+            // Поиск максимального и минимального элемента строки (без флагов bool)
+            
+           int columnOne = 0;
+
+            // Cчитаем, что максимум - это первый элемент строки
+            double maxOne = searchOne[0];
+            // Cчитаем, что минимум - это первый элемент строки
+            double minOne = searchOne[0];
+            while (columnOne < searchOne.Length)
+            {
+               if (maxOne < arraySearch[rowOne, columnOne])
+               {
+                  maxOne = arraySearch[rowOne, columnOne];
+               }
+
+               if (minOne > arraySearch[rowOne, columnOne])
+               {
+                  minOne = arraySearch[rowOne, columnOne];
+               }
+
+               columnOne++;
+            }
+
+            arrayOutputMaxOne[rowOne] = maxOne;
+            arrayOutputMinOne[rowOne] = minOne;
+            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOne, maxOne);
+            //Console.WriteLine("Минимум в строке {0} равен: {1}", rowOne, minOne);
+            columnOne = 0;
+            rowOne++;
+
+
+            // Поиск максимального и минимального элемента строки (с флагами bool)
+            double[] arrayOutputMaxTwo = new double[arraySearch.GetLength(0)];
+            double[] arrayOutputMinTwo = new double[arraySearch.GetLength(0)];
+            bool flMax = false;
+            bool flMin = false;
+            int rowTwo = 0;
+            // Начало отсчета столбцов изменено на 0 (взамен 1)
+            int columnTwo = 0;
+            while (rowTwo < arraySearch.GetLength(0))
+            {
+               double maxTwo = arraySearch[rowTwo, 0];
+               double minTwo = arraySearch[rowTwo, 0];
+               while (columnTwo < arraySearch.GetLength(1))
+               {
+                  if (arraySearch[rowTwo, columnTwo] > maxTwo)
+                  {
+                     maxTwo = arraySearch[rowTwo, columnTwo];
+                     flMax = true;
+                  }
+                  if (arraySearch[rowTwo, columnTwo] < minTwo)
+                  {
+                     minTwo = arraySearch[rowTwo, columnTwo];
+                     flMin = true;
+                  }
+
+                  columnTwo++;
+               }
+               if (flMax)
+               {
+                  arrayOutputMaxTwo[rowTwo] = maxTwo;
+               }
+               if (flMin)
+               {
+                  arrayOutputMinTwo[rowTwo] = minTwo;
+               }
+
+               Console.WriteLine("Максимум в строке {0} равен: {1}", rowTwo, maxTwo);
+               Console.WriteLine("Минимум в строке {0} равен: {1}", rowTwo, minTwo);
+               columnTwo = 0;
+               rowTwo++;
+            }
+
+            Console.WriteLine("Массив максимальных значений строк");
+            int index = 0;
+            while (index < arrayOutputMaxOne.Length)
+            {
+               Console.Write("{0} ", arrayOutputMaxOne[index]);
+               index++;
+            }
+            Console.WriteLine();
+            FileWriteArray(arrayOutputMaxOne);
+            FileWriteArray(arrayOutputMinOne);
+
+
             Console.WriteLine("Максимальное среди отрицательных: " + max);
          }
 
