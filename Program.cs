@@ -45,7 +45,7 @@ namespace Homework_5._1
             {
                if (searchOne[i] < 0)
                {
-                  if (searchOne[i] < max)
+                  if (searchOne[i] > max)
                   {
                      max = searchOne[i];
                   }
