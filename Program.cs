@@ -53,34 +53,28 @@ namespace Homework_5._1
             }
 
             // Поиск максимального и минимального элемента строки (без флагов bool)
-            
-           int columnOne = 0;
-
             // Cчитаем, что максимум - это первый элемент строки
             double maxOne = searchOne[0];
             // Cчитаем, что минимум - это первый элемент строки
             double minOne = searchOne[0];
+            int columnOne = 0;
             while (columnOne < searchOne.Length)
             {
-               if (maxOne < arraySearch[rowOne, columnOne])
+               if (maxOne < searchOne[columnOne])
                {
-                  maxOne = arraySearch[rowOne, columnOne];
+                  maxOne = searchOne[columnOne];
                }
 
-               if (minOne > arraySearch[rowOne, columnOne])
+               if (minOne > searchOne[columnOne])
                {
-                  minOne = arraySearch[rowOne, columnOne];
+                  minOne = searchOne[columnOne];
                }
 
                columnOne++;
             }
 
-            arrayOutputMaxOne[rowOne] = maxOne;
-            arrayOutputMinOne[rowOne] = minOne;
-            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOne, maxOne);
-            //Console.WriteLine("Минимум в строке {0} равен: {1}", rowOne, minOne);
-            columnOne = 0;
-            rowOne++;
+            Console.WriteLine("Максимум равен: {0}", maxOne);
+            Console.WriteLine("Минимум  равен: {0}", minOne);
 
 
             // Поиск максимального и минимального элемента строки (с флагами bool)
