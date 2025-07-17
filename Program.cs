@@ -39,7 +39,7 @@ namespace Homework_5._1
             //File.Create(pathTwo).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
 
-            // Минимальный элемент массива
+            // Максимальный элемент массива среди отрицательных
             int max = searchOne[0];
             for (int i = 1; i < searchOne.Length; i++)
             {
@@ -52,58 +52,31 @@ namespace Homework_5._1
                }
             }
 
-            Console.WriteLine("Максимальное среди отрицательных: " + max);
+            Console.WriteLine("Максимальный элемент массива среди отрицательных: " + max);
 
             // Поиск максимального и минимального элемента строки (без флагов bool)
             // Cчитаем, что максимум - это первый элемент строки
             double maxOne = searchOne[0];
             // Cчитаем, что минимум - это первый элемент строки
             double minOne = searchOne[0];
-            int columnOne = 0;
-            while (columnOne < searchOne.Length)
+            int column = 0;
+            while (column < searchOne.Length)
             {
-               if (maxOne < searchOne[columnOne])
+               if (maxOne < searchOne[column])
                {
-                  maxOne = searchOne[columnOne];
+                  maxOne = searchOne[column];
                }
 
-               if (minOne > searchOne[columnOne])
+               if (minOne > searchOne[column])
                {
-                  minOne = searchOne[columnOne];
+                  minOne = searchOne[column];
                }
 
-               columnOne++;
+               column++;
             }
 
             Console.WriteLine("Максимум равен: {0}", maxOne);
             Console.WriteLine("Минимум  равен: {0}", minOne);
-
-
-            // Поиск максимального и минимального элемента строки (с флагами bool)
-            bool flMax = false;
-            bool flMin = false;
-            // Начало отсчета столбцов изменено на 0 (взамен 1)
-            int columnTwo = 0;
-            double maxTwo = searchOne[0];
-            double minTwo = searchOne[0];
-            while (columnTwo < searchOne.Length)
-            {
-               if (searchOne[columnTwo] > maxTwo)
-               {
-                  maxTwo = searchOne[columnTwo];
-                  flMax = true;
-               }
-               if (searchOne[columnTwo] < minTwo)
-               {
-                  minTwo = searchOne[columnTwo];
-                  flMin = true;
-               }
-
-               columnTwo++;
-            }
-
-            Console.WriteLine("Максимум равен: {0}", maxTwo);
-            Console.WriteLine("Минимум  равен: {0}", minTwo);
          }
 
          Console.ReadKey();
