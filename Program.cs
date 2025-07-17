@@ -32,8 +32,11 @@ namespace Homework_5._1
             int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
             //int index = SearchingLastSetValue(searchOne, value);
             //Console.WriteLine(index);
-            bool fl = SearchingLastValue(searchOne, value);
+            //bool fl = SearchingLastValue(searchOne, value);
+            //Console.WriteLine(fl);
+            bool fl = Check(searchOne, value);
             Console.WriteLine(fl);
+
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             //string pathTwo = Path.GetFullPath(nameFileTwo);
             //File.Create(pathTwo).Close();
@@ -45,7 +48,7 @@ namespace Homework_5._1
             {
                if (searchOne[i] < 0)
                {
-                  if (searchOne[i] > max)
+                  if (searchOne[i] < max)
                   {
                      max = searchOne[i];
                   }
@@ -170,16 +173,32 @@ namespace Homework_5._1
          bool fl = true;
          while (i < inputArray.Length && fl)
          {
-            if (inputArray[i].Equals(setValue))
-            {
-               fl = false;
-            }
-            else
+            if (inputArray[i] < setValue)
             {
                i++;
             }
+            else
+            {
+               fl = false;
+            }
          }
+
          return fl;
+
+         //int i = 0;
+         //bool fl = true;
+         //while (i < inputArray.Length && fl)
+         //{
+         //   if (inputArray[i] == setValue)
+         //   {
+         //      fl = false;
+         //   }
+         //   else
+         //   {
+         //      i++;
+         //   }
+         //}
+         //return fl;
       }
 
       public static bool SearchingLastValue(int[] inputArray, int setValue)
