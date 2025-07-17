@@ -76,7 +76,7 @@ namespace Homework_5._1
             }
 
             Console.WriteLine("Максимум равен: {0}", maxOne);
-            Console.WriteLine("Минимум  равен: {0}", minOne);
+            Console.WriteLine("Минимум равен: {0}", minOne);
          }
 
          Console.ReadKey();
