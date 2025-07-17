@@ -66,7 +66,6 @@ namespace Homework_5._1
                {
                   maxOne = searchOne[column];
                }
-
                if (minOne > searchOne[column])
                {
                   minOne = searchOne[column];
