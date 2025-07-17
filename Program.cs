@@ -52,6 +52,8 @@ namespace Homework_5._1
                }
             }
 
+            Console.WriteLine("Максимальное среди отрицательных: " + max);
+
             // Поиск максимального и минимального элемента строки (без флагов bool)
             // Cчитаем, что максимум - это первый элемент строки
             double maxOne = searchOne[0];
@@ -101,8 +103,7 @@ namespace Homework_5._1
             }
 
             Console.WriteLine("Максимум равен: {0}", maxTwo);
-            Console.WriteLine("Максимум равен: {0}", minTwo);
-            //Console.WriteLine("Максимальное среди отрицательных: " + max);
+            Console.WriteLine("Минимум  равен: {0}", minTwo);
          }
 
          Console.ReadKey();
