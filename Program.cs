@@ -78,60 +78,31 @@ namespace Homework_5._1
 
 
             // Поиск максимального и минимального элемента строки (с флагами bool)
-            double[] arrayOutputMaxTwo = new double[arraySearch.GetLength(0)];
-            double[] arrayOutputMinTwo = new double[arraySearch.GetLength(0)];
             bool flMax = false;
             bool flMin = false;
-            int rowTwo = 0;
             // Начало отсчета столбцов изменено на 0 (взамен 1)
             int columnTwo = 0;
-            while (rowTwo < arraySearch.GetLength(0))
+            double maxTwo = searchOne[0];
+            double minTwo = searchOne[0];
+            while (columnTwo < searchOne.Length)
             {
-               double maxTwo = arraySearch[rowTwo, 0];
-               double minTwo = arraySearch[rowTwo, 0];
-               while (columnTwo < arraySearch.GetLength(1))
+               if (searchOne[columnTwo] > maxTwo)
                {
-                  if (arraySearch[rowTwo, columnTwo] > maxTwo)
-                  {
-                     maxTwo = arraySearch[rowTwo, columnTwo];
-                     flMax = true;
-                  }
-                  if (arraySearch[rowTwo, columnTwo] < minTwo)
-                  {
-                     minTwo = arraySearch[rowTwo, columnTwo];
-                     flMin = true;
-                  }
-
-                  columnTwo++;
+                  maxTwo = searchOne[columnTwo];
+                  flMax = true;
                }
-               if (flMax)
+               if (searchOne[columnTwo] < minTwo)
                {
-                  arrayOutputMaxTwo[rowTwo] = maxTwo;
-               }
-               if (flMin)
-               {
-                  arrayOutputMinTwo[rowTwo] = minTwo;
+                  minTwo = searchOne[columnTwo];
+                  flMin = true;
                }
 
-               Console.WriteLine("Максимум в строке {0} равен: {1}", rowTwo, maxTwo);
-               Console.WriteLine("Минимум в строке {0} равен: {1}", rowTwo, minTwo);
-               columnTwo = 0;
-               rowTwo++;
+               columnTwo++;
             }
 
-            Console.WriteLine("Массив максимальных значений строк");
-            int index = 0;
-            while (index < arrayOutputMaxOne.Length)
-            {
-               Console.Write("{0} ", arrayOutputMaxOne[index]);
-               index++;
-            }
-            Console.WriteLine();
-            FileWriteArray(arrayOutputMaxOne);
-            FileWriteArray(arrayOutputMinOne);
-
-
-            Console.WriteLine("Максимальное среди отрицательных: " + max);
+            Console.WriteLine("Максимум равен: {0}", maxTwo);
+            Console.WriteLine("Максимум равен: {0}", minTwo);
+            //Console.WriteLine("Максимальное среди отрицательных: " + max);
          }
 
          Console.ReadKey();
