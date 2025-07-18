@@ -105,14 +105,24 @@ namespace Homework_5._1
                }
             }
             streamReader.Close();
-
             if (sourceArray.Length == 0)
             {
                Console.WriteLine("Файл {0} пуст", nameFileEnter);
             }
             else
             {
-               int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceArray, elements);
+               Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
+               int[] outputArray = new int[elements];
+               int i = 0;
+               while (i < elements)
+               {
+                  outputArray[i] = sourceArray[i];
+                  Console.Write("{0} ", outputArray[i]);
+                  i++;
+               }
+
+               Console.WriteLine();
+
                //int index = SearchingLastSetValue(searchOne, value);
                //Console.WriteLine(index);
                //bool fl = SearchingLastValue(searchOne, value);
