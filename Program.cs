@@ -168,12 +168,6 @@ namespace Homework_5._1
          Console.WriteLine("Максимум равен: {0}", maxOne);
          Console.WriteLine("Минимум равен: {0}", minOne);
 
-         int z;
-         double myDr, mySqr, mySqrt, myD = 12.987;
-         z = TrNumber(myD, out myDr, out mySqr, out mySqrt);
-         Console.WriteLine("Исходное число: {0}\nЦелая часть числа: {1}\nДробная часть числа: {2}\nКвадрат числа: {3}\nКвадратный корень числа: {4}",
-            myD, z, myDr, mySqr, mySqrt);
-
          int x = 1, y = 2, a = 3, b = 4, sum = -1;
          Console.WriteLine("До вызова: x={0}; y ={1}; a ={2}; b ={3}; sum ={4}", x, y, a, b, sum);
          sum = Add(x, y, out a, out b);
@@ -188,16 +182,6 @@ namespace Homework_5._1
          int sum = x + y;
          x = 10; y = 20; a = 30; b = 40;
          return sum;
-      }
-
-      // Метод возвращающий целую и дробную части числа, квадрат и корень числа
-      static int TrNumber(double d, out double dr, out double sqr, out double sqrt)
-      {
-         int i = (int)d;
-         dr = d - i;
-         sqr = d * d;
-         sqrt = Math.Sqrt(d);
-         return i;
       }
 
       public static bool Check(int[] inputArray, int setValue)
