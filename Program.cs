@@ -105,77 +105,72 @@ namespace Homework_5._1
                }
             }
             streamReader.Close();
-            if (sourceArray.Length == 0)
+
+            Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
+            int[] outputArray = new int[elements];
+            int i = 0;
+            while (i < elements)
             {
-               Console.WriteLine("Файл {0} пуст", nameFileEnter);
-            }
-            else
-            {
-               Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
-               int[] outputArray = new int[elements];
-               int i = 0;
-               while (i < elements)
-               {
-                  outputArray[i] = sourceArray[i];
-                  Console.Write("{0} ", outputArray[i]);
-                  i++;
-               }
-
-               Console.WriteLine();
-
-               //int index = SearchingLastSetValue(searchOne, value);
-               //Console.WriteLine(index);
-               //bool fl = SearchingLastValue(searchOne, value);
-               //Console.WriteLine(fl);
-               bool fl = Check(sourceArray, value);
-               Console.WriteLine(fl);
-
-               //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-               //string pathTwo = Path.GetFullPath(nameFileTwo);
-               //File.Create(pathTwo).Close();
-               //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+               outputArray[i] = sourceArray[i];
+               Console.Write("{0} ", outputArray[i]);
+               i++;
             }
 
-            // Минимальный элемент массива среди отрицательных
-            int max = sourceArray[0];
-            for (int i = 1; i < sourceArray.Length; i++)
-            {
-               if (sourceArray[i] < 0)
-               {
-                  if (sourceArray[i] < max)
-                  {
-                     max = sourceArray[i];
-                  }
-               }
-            }
+            Console.WriteLine();
 
-            Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
+            //int index = SearchingLastSetValue(searchOne, value);
+            //Console.WriteLine(index);
+            //bool fl = SearchingLastValue(searchOne, value);
+            //Console.WriteLine(fl);
+            bool fl = Check(sourceArray, value);
+            Console.WriteLine(fl);
 
-            // Поиск максимального и минимального элемента строки
-            // Cчитаем, что максимум - это первый элемент строки
-            double maxOne = sourceArray[0];
-            // Cчитаем, что минимум - это первый элемент строки
-            double minOne = sourceArray[0];
-            int column = 0;
-            while (column < sourceArray.Length)
-            {
-               if (maxOne < sourceArray[column])
-               {
-                  maxOne = sourceArray[column];
-               }
-
-               if (minOne > sourceArray[column])
-               {
-                  minOne = sourceArray[column];
-               }
-
-               column++;
-            }
-            Console.WriteLine("Максимум равен: {0}", maxOne);
-            Console.WriteLine("Минимум равен: {0}", minOne);
-
-            Console.ReadKey();
+            //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
+            //string pathTwo = Path.GetFullPath(nameFileTwo);
+            //File.Create(pathTwo).Close();
+            //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
+
+         // Минимальный элемент массива среди отрицательных
+         int max = sourceArray[0];
+         for (int i = 1; i < sourceArray.Length; i++)
+         {
+            if (sourceArray[i] < 0)
+            {
+               if (sourceArray[i] < max)
+               {
+                  max = sourceArray[i];
+               }
+            }
+         }
+
+         Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
+
+         // Поиск максимального и минимального элемента строки
+         // Cчитаем, что максимум - это первый элемент строки
+         double maxOne = sourceArray[0];
+         // Cчитаем, что минимум - это первый элемент строки
+         double minOne = sourceArray[0];
+         int column = 0;
+         while (column < sourceArray.Length)
+         {
+            if (maxOne < sourceArray[column])
+            {
+               maxOne = sourceArray[column];
+            }
+
+            if (minOne > sourceArray[column])
+            {
+               minOne = sourceArray[column];
+            }
+
+            column++;
+         }
+         Console.WriteLine("Максимум равен: {0}", maxOne);
+         Console.WriteLine("Минимум равен: {0}", minOne);
+
+         Console.ReadKey();
+
       }
 
       //   int t;
