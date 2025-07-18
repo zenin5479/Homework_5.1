@@ -16,10 +16,24 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
+         int value;
          string nameFileOne = "a.txt";
-         //string nameFileTwo = "finish.txt";
+         string nameFileTwo = "finish.txt";
 
-         int value = EnterSetValue();
+         do
+         {
+            Console.WriteLine("Введите значение элемента:");
+            int.TryParse(Console.ReadLine(), out value);
+            //value = Convert.ToInt32(Console.ReadLine());
+            if (value <= -100 || value >= 100)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (value <= -100 || value >= 100);
+
+
+
+
          int elementsOne = LibraryFor1DArray.NumberArrayElements();
          string pathOne = Path.GetFullPath(nameFileOne);
          int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
