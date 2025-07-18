@@ -20,7 +20,6 @@ namespace Homework_5._1
          int value, elements;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
-
          do
          {
             Console.WriteLine("Введите значение элемента:");
@@ -31,7 +30,6 @@ namespace Homework_5._1
                Console.WriteLine("Введено не верное значение");
             }
          } while (value <= -100 || value >= 100);
-
          do
          {
             Console.WriteLine("Введите количество элементов массива:");
@@ -42,11 +40,9 @@ namespace Homework_5._1
                Console.WriteLine("Введено не верное значение");
             }
          } while (elements <= 0 || elements > 20);
-
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
-         
          string stroka = null;
-         int[] sourceArray;
+         int[] sourceArray = { };
          FileStream filestream = File.Open(pathFileEnter, FileMode.Open, FileAccess.Read);
          if (filestream == null || filestream.Length == 0)
          {
@@ -59,7 +55,6 @@ namespace Homework_5._1
             {
                stroka = streamReader.ReadLine();
             }
-
             char symbolSpace = ' ';
             int symbolСount = 0;
             int сolumn = 0;
@@ -102,7 +97,6 @@ namespace Homework_5._1
                   {
                      string subLine = stringModified.ToString();
                      sourceArray[сolumn] = Convert.ToInt32(subLine);
-                     //Console.Write(arrayInt[сolumn]);
                      stringModified.Clear();
                      сolumn++;
                   }
@@ -110,75 +104,68 @@ namespace Homework_5._1
                   symbolСount++;
                }
             }
-
             streamReader.Close();
-            //Console.WriteLine();
-         }
 
+            if (sourceArray.Length == 0)
+            {
+               Console.WriteLine("Файл {0} пуст", nameFileEnter);
+            }
+            else
+            {
+               int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceArray, elements);
+               //int index = SearchingLastSetValue(searchOne, value);
+               //Console.WriteLine(index);
+               //bool fl = SearchingLastValue(searchOne, value);
+               //Console.WriteLine(fl);
+               bool fl = Check(sourceArray, value);
+               Console.WriteLine(fl);
 
+               //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
+               //string pathTwo = Path.GetFullPath(nameFileTwo);
+               //File.Create(pathTwo).Close();
+               //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+            }
 
-
-         //int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathFileEnter);
-         //if (sourceOne.Length == 0)
-         //{
-         //   Console.WriteLine("Файл {0} пуст", nameFileEnter);
-         //}
-         //else
-         //{
-         //   int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elements);
-         //   //int index = SearchingLastSetValue(searchOne, value);
-         //   //Console.WriteLine(index);
-         //   //bool fl = SearchingLastValue(searchOne, value);
-         //   //Console.WriteLine(fl);
-         //   bool fl = Check(searchOne, value);
-         //   Console.WriteLine(fl);
-
-         //   //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-         //   //string pathTwo = Path.GetFullPath(nameFileTwo);
-         //   //File.Create(pathTwo).Close();
-         //   //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
-
-         //   // Минимальный элемент массива среди отрицательных
-         //   int max = searchOne[0];
-         //   for (int i = 1; i < searchOne.Length; i++)
-         //   {
-         //      if (searchOne[i] < 0)
-         //      {
-         //         if (searchOne[i] < max)
-         //         {
-         //            max = searchOne[i];
-         //         }
-         //      }
-         //   }
+            // Минимальный элемент массива среди отрицательных
+            int max = sourceArray[0];
+            for (int i = 1; i < sourceArray.Length; i++)
+            {
+               if (sourceArray[i] < 0)
+               {
+                  if (sourceArray[i] < max)
+                  {
+                     max = sourceArray[i];
+                  }
+               }
+            }
 
             Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
 
             // Поиск максимального и минимального элемента строки
             // Cчитаем, что максимум - это первый элемент строки
-            double maxOne = searchOne[0];
+            double maxOne = sourceArray[0];
             // Cчитаем, что минимум - это первый элемент строки
-            double minOne = searchOne[0];
+            double minOne = sourceArray[0];
             int column = 0;
-            while (column < searchOne.Length)
+            while (column < sourceArray.Length)
             {
-               if (maxOne < searchOne[column])
+               if (maxOne < sourceArray[column])
                {
-                  maxOne = searchOne[column];
+                  maxOne = sourceArray[column];
                }
 
-               if (minOne > searchOne[column])
+               if (minOne > sourceArray[column])
                {
-                  minOne = searchOne[column];
+                  minOne = sourceArray[column];
                }
 
                column++;
             }
-
             Console.WriteLine("Максимум равен: {0}", maxOne);
             Console.WriteLine("Минимум равен: {0}", minOne);
-         }
 
-         Console.ReadKey();
+            Console.ReadKey();
+         }
       }
 
       //   int t;
