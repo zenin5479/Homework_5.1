@@ -16,9 +16,9 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value;
-         string nameFileOne = "a.txt";
-         string nameFileTwo = "finish.txt";
+         int value, elements;
+         string nameFileEnter = "a.txt";
+         string nameFileInput = "finish.txt";
 
          do
          {
@@ -31,19 +31,27 @@ namespace Homework_5._1
             }
          } while (value <= -100 || value >= 100);
 
+         do
+         {
+            Console.WriteLine("Введите количество элементов массива:");
+            //int.TryParse(Console.ReadLine(), out elements);
+            elements = Convert.ToInt32(Console.ReadLine());
+            if (elements <= 0 || elements > 20)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (elements <= 0 || elements > 20);
 
+         string pathOne = Path.GetFullPath(nameFileEnter);
 
-
-         int elementsOne = LibraryFor1DArray.NumberArrayElements();
-         string pathOne = Path.GetFullPath(nameFileOne);
          int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
          if (sourceOne.Length == 0)
          {
-            Console.WriteLine("Файл {0} пуст", nameFileOne);
+            Console.WriteLine("Файл {0} пуст", nameFileEnter);
          }
          else
          {
-            int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elementsOne);
+            int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elements);
             //int index = SearchingLastSetValue(searchOne, value);
             //Console.WriteLine(index);
             //bool fl = SearchingLastValue(searchOne, value);
