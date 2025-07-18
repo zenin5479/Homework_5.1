@@ -6,6 +6,23 @@ namespace Homework_5._1
 {
    public class LibraryFor1DArray
    {
+      public static int EnterSetValue()
+      {
+         int v;
+         do
+         {
+            Console.WriteLine("Введите значение элемента:");
+            int.TryParse(Console.ReadLine(), out v);
+            //v = Convert.ToInt32(Console.ReadLine());
+            if (v <= -100 || v >= 100)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (v <= -100 || v >= 100);
+
+         return v;
+      }
+
       public static int NumberArrayElements()
       {
          int n;

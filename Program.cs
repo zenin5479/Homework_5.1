@@ -143,7 +143,6 @@ namespace Homework_5._1
                }
             }
          }
-
          Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
 
          // Поиск максимального и минимального элемента строки
@@ -169,91 +168,37 @@ namespace Homework_5._1
          Console.WriteLine("Максимум равен: {0}", maxOne);
          Console.WriteLine("Минимум равен: {0}", minOne);
 
+         int z;
+         double myDr, mySqr, mySqrt, myD = 12.987;
+         z = TrNumber(myD, out myDr, out mySqr, out mySqrt);
+         Console.WriteLine("Исходное число: {0}\nЦелая часть числа: {1}\nДробная часть числа: {2}\nКвадрат числа: {3}\nКвадратный корень числа: {4}",
+            myD, z, myDr, mySqr, mySqrt);
+
+         int x = 1, y = 2, a = 3, b = 4;
+         Console.WriteLine("До вызова: \tx={0}; y ={1}; a ={2}; b ={3}", x, y, a, b);
+         Add(x, y, out a, out b);
+         Console.WriteLine("После вызова: \tx={0}; y ={1}; a ={2}; b ={3}", x, y, a, b);
          Console.ReadKey();
 
       }
 
-      //   int t;
-      //   double istart, mina;
-      //   bool fl = false;
-      //   printf("Введите величину t\n");
-      //   scanf("%d", &t);
-      //   double* a;
-      //   int n;
-      //      do
-      //   {
-      //      printf("Введите количество элементов массива А\n");
-      //      scanf("%d", &n);
-      //      if (n <= 0 || n >= 20)
-      //      {
-      //         printf("Введено неверное значение\n");
-      //      }
-      //   } while (n <= 0 || n >= 20) ;
-      //a = new double[n];
-      //printf("Задайте элементы массива А\n");
-      //for (int i = 0; i < n; i++)
-      //   scanf("%lf", &a[i]);
-      //printf("Массив: ");
-      //for (int i = 0; i < n; i++)
-      //   printf("%lf ", a[i]);
-      //istart = a[0];
-      //int i = n - 1;
-      //while (i > -1 and fl == false)
-      //{
-      //   if (a[i] == t)
-      //   {
-      //      fl = true;
-      //   }
-      //   else
-      //   {
-      //      i = i - 1;
-      //   }
-      //}
+      // Выходные параметры, представленные значением
+      public static int Add(int x, int y, out int a, out int b)
+      {
+         int answer = x + y;
+         x = 10; y = 20; a = 30; b = 40;
+         return answer;
+      }
 
-      //if (fl == true)
-      //{
-      //   istart = i;
-      //   printf("\nНомер элемента равный t: %f", istart);
-      //}
-      //if (fl == false)
-      //{
-      //   printf("\nЧисла равного t нет\n");
-      //   istart = n - 1; // зачем уменьшаем число элементов????
-      //   //istart = n;
-      //}
-      //mina = a[0];
-      //for (int k = 0; k < n; k++)
-      //{
-      //   if (a[k] < mina)
-      //   {
-      //      mina = a[k];
-      //   }
-      //}
-      //if (mina > 0)
-      //{
-      //   fl = false;
-      //   printf("Отрицательных элементов нет\n");
-      //}
-      //else
-      //{
-      //   fl = true;
-      //}
-      //i = 0;
-      //while (i < istart and fl == true)
-      //{
-      //   if (a[i] < 0)
-      //   {
-      //      if (a[i] > mina)
-      //      {
-      //         mina = a[i];
-      //      }
-      //   }
-      //   i++;
-      //}
-      //if (fl == true)
-      //{
-      //   printf("\nМаксимум %f \n", mina);
-      //}
+      // Метод возвращающий целую и дробную части числа, квадрат и корень числа
+      static int TrNumber(double d, out double dr, out double sqr, out double sqrt)
+      {
+         int i = (int)d;
+         dr = d - i;
+         sqr = d * d;
+         sqrt = Math.Sqrt(d);
+         return i;
+      }
 
       public static bool Check(int[] inputArray, int setValue)
       {
@@ -332,23 +277,6 @@ namespace Homework_5._1
 
          Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
          return -1;
-      }
-
-      public static int EnterSetValue()
-      {
-         int v;
-         do
-         {
-            Console.WriteLine("Введите значение элемента:");
-            int.TryParse(Console.ReadLine(), out v);
-            //v = Convert.ToInt32(Console.ReadLine());
-            if (v <= -100 || v >= 100)
-            {
-               Console.WriteLine("Введено не верное значение");
-            }
-         } while (v <= -100 || v >= 100);
-
-         return v;
       }
    }
 }
