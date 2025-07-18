@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 
 // Поиск экстремального элемента, удовлетворяющего нескольким условиям
 // В данной задаче необходимо сначала найти номер элемента, удовлетворяющего одному условию,
@@ -42,40 +43,113 @@ namespace Homework_5._1
             }
          } while (elements <= 0 || elements > 20);
 
-         string pathOne = Path.GetFullPath(nameFileEnter);
-
-         int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathOne);
-         if (sourceOne.Length == 0)
+         string pathFileEnter = Path.GetFullPath(nameFileEnter);
+         
+         string stroka = null;
+         int[] sourceArray;
+         FileStream filestream = File.Open(pathFileEnter, FileMode.Open, FileAccess.Read);
+         if (filestream == null || filestream.Length == 0)
          {
-            Console.WriteLine("Файл {0} пуст", nameFileEnter);
+            Console.WriteLine("Ошибка при открытии файла для чтения");
          }
          else
          {
-            int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elements);
-            //int index = SearchingLastSetValue(searchOne, value);
-            //Console.WriteLine(index);
-            //bool fl = SearchingLastValue(searchOne, value);
-            //Console.WriteLine(fl);
-            bool fl = Check(searchOne, value);
-            Console.WriteLine(fl);
-
-            //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-            //string pathTwo = Path.GetFullPath(nameFileTwo);
-            //File.Create(pathTwo).Close();
-            //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
-
-            // Минимальный элемент массива среди отрицательных
-            int max = searchOne[0];
-            for (int i = 1; i < searchOne.Length; i++)
+            StreamReader streamReader = new StreamReader(filestream);
+            while (streamReader.Peek() >= 0)
             {
-               if (searchOne[i] < 0)
+               stroka = streamReader.ReadLine();
+            }
+
+            char symbolSpace = ' ';
+            int symbolСount = 0;
+            int сolumn = 0;
+            if (stroka != null)
+            {
+               while (symbolСount < stroka.Length)
                {
-                  if (searchOne[i] < max)
+                  if (symbolSpace == stroka[symbolСount])
                   {
-                     max = searchOne[i];
+                     сolumn++;
                   }
+
+                  if (symbolСount == stroka.Length - 1)
+                  {
+                     сolumn++;
+                  }
+
+                  symbolСount++;
+               }
+
+               sourceArray = new int[сolumn];
+               StringBuilder stringModified = new StringBuilder();
+               symbolСount = 0;
+               сolumn = 0;
+               while (symbolСount < stroka.Length)
+               {
+                  if (symbolSpace != stroka[symbolСount])
+                  {
+                     stringModified.Append(stroka[symbolСount]);
+                  }
+                  else
+                  {
+                     string subLine = stringModified.ToString();
+                     sourceArray[сolumn] = Convert.ToInt32(subLine);
+                     stringModified.Clear();
+                     сolumn++;
+                  }
+
+                  if (symbolСount == stroka.Length - 1)
+                  {
+                     string subLine = stringModified.ToString();
+                     sourceArray[сolumn] = Convert.ToInt32(subLine);
+                     //Console.Write(arrayInt[сolumn]);
+                     stringModified.Clear();
+                     сolumn++;
+                  }
+
+                  symbolСount++;
                }
             }
+
+            streamReader.Close();
+            //Console.WriteLine();
+         }
+
+
+
+
+         //int[] sourceOne = LibraryFor1DArray.EnterArrayInt(pathFileEnter);
+         //if (sourceOne.Length == 0)
+         //{
+         //   Console.WriteLine("Файл {0} пуст", nameFileEnter);
+         //}
+         //else
+         //{
+         //   int[] searchOne = LibraryFor1DArray.InputArrayInt(sourceOne, elements);
+         //   //int index = SearchingLastSetValue(searchOne, value);
+         //   //Console.WriteLine(index);
+         //   //bool fl = SearchingLastValue(searchOne, value);
+         //   //Console.WriteLine(fl);
+         //   bool fl = Check(searchOne, value);
+         //   Console.WriteLine(fl);
+
+         //   //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
+         //   //string pathTwo = Path.GetFullPath(nameFileTwo);
+         //   //File.Create(pathTwo).Close();
+         //   //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+
+         //   // Минимальный элемент массива среди отрицательных
+         //   int max = searchOne[0];
+         //   for (int i = 1; i < searchOne.Length; i++)
+         //   {
+         //      if (searchOne[i] < 0)
+         //      {
+         //         if (searchOne[i] < max)
+         //         {
+         //            max = searchOne[i];
+         //         }
+         //      }
+         //   }
 
             Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
 
