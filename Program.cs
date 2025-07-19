@@ -136,7 +136,7 @@ namespace Homework_5._1
 
             if (flag == true)
             {
-               istart = r;
+               istart = s;
                Console.WriteLine("Номер элемента равный {0}: {1}", value, istart);
                //printf("\nНомер элемента равный t: %f", istart);
             }
@@ -180,7 +180,7 @@ namespace Homework_5._1
             }
             if (flag == true)
             {
-               Console.WriteLine("Максимум: {}", mina);
+               Console.WriteLine("Максимум: {0}", mina);
                //printf("\nМаксимум %f \n", mina);
             }
 
