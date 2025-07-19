@@ -17,7 +17,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value, elements;
+         int value, elements, istart, mina;;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
          do
@@ -118,7 +118,7 @@ namespace Homework_5._1
 
             Console.WriteLine();
 
-            double istart, mina;
+            
             bool flag = false;
             istart = outputArray[0];
             int s = outputArray.Length - 1;
@@ -152,12 +152,10 @@ namespace Homework_5._1
                   mina = outputArray[k];
                }
             }
-
             if (mina > 0)
             {
                flag = false;
                Console.WriteLine("Отрицательных элементов нет");
-               //printf("Отрицательных элементов нет\n");
             }
             else
             {
