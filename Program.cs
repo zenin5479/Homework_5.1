@@ -117,7 +117,7 @@ namespace Homework_5._1
             }
 
             Console.WriteLine();
-            
+
             double istart, mina;
             bool flag = false;
             istart = outputArray[0];
