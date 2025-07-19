@@ -183,8 +183,6 @@ namespace Homework_5._1
             //}
             //delete[] a;
 
-
-
             //int index = SearchingLastSetValue(searchOne, value);
             //Console.WriteLine(index);
             //bool fl = SearchingLastValue(searchOne, value);
