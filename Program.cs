@@ -121,20 +121,20 @@ namespace Homework_5._1
 
             double istart, mina;
             bool flag = false;
-
-            //istart = a[0];
-            //int i = n - 1;
-            //while (i > -1 and fl == false)
-            //{
-            //   if (a[i] == t)
-            //   {
-            //      fl = true;
-            //   }
-            //   else
-            //   {
-            //      i = i - 1;
-            //   }
-            //}
+            
+            istart = outputArray[0];
+            int s = outputArray.Length - 1;
+            while (s > -1 && flag == false)
+            {
+               if (outputArray[s] == value)
+               {
+                  flag = true;
+               }
+               else
+               {
+                  s = s - 1;
+               }
+            }
 
             //if (fl == true)
             //{
