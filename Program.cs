@@ -17,7 +17,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value, elements, istart, mina;;
+         int value, elements, istart, mina; ;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
          do
@@ -118,7 +118,6 @@ namespace Homework_5._1
 
             Console.WriteLine();
 
-            
             bool flag = false;
             istart = outputArray[0];
             int s = outputArray.Length - 1;
@@ -177,7 +176,6 @@ namespace Homework_5._1
             if (flag == true)
             {
                Console.WriteLine("Максимум: {0}", mina);
-               //printf("\nМаксимум %f \n", mina);
             }
 
             //int index = SearchingLastSetValue(searchOne, value);
