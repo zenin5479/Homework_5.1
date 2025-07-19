@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Common;
 using System.IO;
 using System.Text;
 
@@ -401,7 +400,7 @@ namespace Homework_5._1
 
             column++;
          }
-         
+
          Console.WriteLine("Минимальный элемент массива среди отрицательных: " + min);
          return min;
       }
