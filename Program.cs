@@ -132,18 +132,18 @@ namespace Homework_5._1
          }
 
          // Минимальный элемент массива среди отрицательных
-         int max = sourceArray[0];
+         int min = sourceArray[0];
          for (int i = 1; i < sourceArray.Length; i++)
          {
             if (sourceArray[i] < 0)
             {
-               if (sourceArray[i] < max)
+               if (sourceArray[i] < min)
                {
-                  max = sourceArray[i];
+                  min = sourceArray[i];
                }
             }
          }
-         Console.WriteLine("Минимальный элемент массива среди отрицательных: " + max);
+         Console.WriteLine("Минимальный элемент массива среди отрицательных: " + min);
 
          // Поиск максимального и минимального элемента строки
          // Cчитаем, что максимум - это первый элемент строки
