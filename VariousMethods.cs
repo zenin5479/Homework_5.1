@@ -714,6 +714,26 @@ namespace Homework_5._1
          return inputArray;
       }
 
+      public static int SearchingLastSetValue(int[] inputArray, int setValue)
+      {
+         // Поиск элемента строки обход массива с последнего элемента
+         int i = inputArray.Length - 1;
+         while (i >= 0)
+         {
+            // Сравниваем значения int используя оператор равенства ==
+            if (inputArray[i] == setValue)
+            {
+               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
+               return i;
+            }
+
+            i--;
+         }
+
+         Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
+         return -1;
+      }
+
       public static int SearchingNullInt(int[] inputArray)
       {
          double numbercomparison = 0;
