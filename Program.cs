@@ -138,12 +138,10 @@ namespace Homework_5._1
             {
                istart = s;
                Console.WriteLine("Номер элемента равный {0}: {1}", value, istart);
-               //printf("\nНомер элемента равный t: %f", istart);
             }
             if (flag == false)
             {
                Console.WriteLine("Числа равного {0} нет", value);
-               //printf("\nЧисла равного t нет\n");
                istart = outputArray.Length - 1;
             }
             mina = outputArray[0];
