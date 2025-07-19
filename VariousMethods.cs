@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Common;
 using System.IO;
 using System.Text;
 
@@ -380,6 +381,46 @@ namespace Homework_5._1
 
          Console.WriteLine();
          return outputArray;
+      }
+
+      public static int FindMinNegativeArrayInt(int[] inputArray)
+      {
+         // Поиск максимального элемента строки (без флагов bool)
+         // Cчитаем, что максимум - это первый элемент строки
+         int max = inputArray[0];
+
+         // Минимальный элемент массива среди отрицательных
+         int min = inputArray[0];
+
+         int column = 0;
+         while (column < inputArray.Length)
+         {
+            if (inputArray[column] < 0)
+            {
+               if (inputArray[column] < min)
+               {
+                  min = inputArray[column];
+               }
+            }
+
+            column++;
+         }
+
+         Console.WriteLine("Максимум в массиве равен: {0}", max);
+         return max;
+
+
+
+
+
+         for (int i = 1; i < inputArray.Length; i++)
+         {
+
+         }
+         Console.WriteLine("Минимальный элемент массива среди отрицательных: " + min);
+
+
+         return min;
       }
 
       public static int FindMaxArrayInt(int[] inputArray)
