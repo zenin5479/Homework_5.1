@@ -118,6 +118,46 @@ namespace Homework_5._1
 
             Console.WriteLine();
 
+
+            double istart, mina;
+            bool flag = false;
+
+            //istart = a[0];
+            //int i = n - 1;
+            //while (i > -1 and fl == false)
+            //{
+            //   if (a[i] == t)
+            //   {
+            //      fl = true;
+            //   }
+            //   else
+            //   {
+            //      i = i - 1;
+            //   }
+            //}
+
+            //if (fl == true)
+            //{
+            //   istart = i;
+            //   printf("\nНомер элемента равный t: %f", istart);
+            //}
+            //if (fl == false)
+            //{
+            //   printf("\nЧисла равного t нет\n");
+            //   istart = n - 1; // зачем уменьшаем число элементов????
+            //   //istart = n;
+            //}
+            //mina = a[0];
+            //for (int k = 0; k < n; k++)
+            //{
+            //   if (a[k] < mina)
+            //   {
+            //      mina = a[k];
+            //   }
+            //}
+
+
+
             //int index = SearchingLastSetValue(searchOne, value);
             //Console.WriteLine(index);
             //bool fl = SearchingLastValue(searchOne, value);
