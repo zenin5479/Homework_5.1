@@ -122,7 +122,7 @@ namespace Homework_5._1
             //Console.WriteLine(index);
             //bool fl = SearchingLastValue(searchOne, value);
             //Console.WriteLine(fl);
-            bool fl = Check(sourceArray, value);
+            bool fl = CheckSetValue(sourceArray, value);
             Console.WriteLine(fl);
 
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
@@ -184,7 +184,7 @@ namespace Homework_5._1
          return sum;
       }
 
-      public static bool Check(int[] inputArray, int setValue)
+      public static bool CheckSetValue(int[] inputArray, int setValue)
       {
          //int i = 0;
          //bool fl = true;
@@ -216,51 +216,6 @@ namespace Homework_5._1
          }
 
          return fl;
-      }
-
-      public static bool SearchingLastValue(int[] inputArray, int setValue)
-      {
-         // Поиск элемента строки (c флагом bool) обход массива с последнего элемента
-         bool flag = true;
-         int i = inputArray.Length - 1;
-         while (i >= 0 && flag)
-         {
-            // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-               flag = false;
-            }
-
-            i--;
-         }
-
-         if (flag)
-         {
-            Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
-         }
-
-         return flag;
-      }
-
-      public static int SearchingLastSetValue(int[] inputArray, int setValue)
-      {
-         // Поиск элемента строки обход массива с последнего элемента
-         int i = inputArray.Length - 1;
-         while (i >= 0)
-         {
-            // Сравниваем значения int используя оператор равенства ==
-            if (inputArray[i] == setValue)
-            {
-               Console.WriteLine("В массиве найден элемент {0} по индексу: {1}", setValue, i);
-               return i;
-            }
-
-            i--;
-         }
-
-         Console.WriteLine("В массиве отсутствует элемент: {0}", setValue);
-         return -1;
       }
    }
 }
