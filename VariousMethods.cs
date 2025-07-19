@@ -386,7 +386,7 @@ namespace Homework_5._1
       public static int FindMinNegativeArrayInt(int[] inputArray)
       {
          // Поиск минимального элемента массива среди отрицательных
-         // Cчитаем, что минимум - это первый элемент
+         // Cчитаем, что минимум - это первый элемент массива
          int min = inputArray[0];
          int column = 0;
          while (column < inputArray.Length)
@@ -404,6 +404,32 @@ namespace Homework_5._1
          
          Console.WriteLine("Минимальный элемент массива среди отрицательных: " + min);
          return min;
+      }
+
+      public static void FindMaxMinArrayInt(int[] inputArray, out int max, out int min)
+      {
+         // Поиск максимального и минимального элемента массива
+         // Cчитаем, что максимум - это первый элемент массива
+         max = inputArray[0];
+         // Cчитаем, что минимум - это первый элемент массива
+         min = inputArray[0];
+         int column = 0;
+         while (column < inputArray.Length)
+         {
+            if (max < inputArray[column])
+            {
+               max = inputArray[column];
+            }
+
+            if (min > inputArray[column])
+            {
+               min = inputArray[column];
+            }
+
+            column++;
+         }
+         Console.WriteLine("Максимум равен: {0}", max);
+         Console.WriteLine("Минимум равен: {0}", min);
       }
 
       public static int FindMaxArrayInt(int[] inputArray)
