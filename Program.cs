@@ -126,8 +126,8 @@ namespace Homework_5._1
             Console.WriteLine(fl);
 
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-            //string pathTwo = Path.GetFullPath(nameFileTwo);
-            //File.Create(pathTwo).Close();
+            string pathFileInput = Path.GetFullPath(nameFileInput);
+            File.Create(pathFileInput).Close();
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
