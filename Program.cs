@@ -121,7 +121,6 @@ namespace Homework_5._1
 
             double istart, mina;
             bool flag = false;
-            
             istart = outputArray[0];
             int s = outputArray.Length - 1;
             while (s > -1 && flag == false)
@@ -136,25 +135,53 @@ namespace Homework_5._1
                }
             }
 
+            if (flag == true)
+            {
+               istart = i;
+               Console.WriteLine("Номер элемента равный {0}: {1}", value, istart);
+               //printf("\nНомер элемента равный t: %f", istart);
+            }
+            if (flag == false)
+            {
+               Console.WriteLine("Числа равного {0} нет", value);
+               //printf("\nЧисла равного t нет\n");
+               istart = outputArray.Length - 1;
+            }
+            mina = outputArray[0];
+            for (int k = 0; k < istart; k++)
+            {
+               if (outputArray[k] < mina)
+               {
+                  mina = outputArray[k];
+               }
+            }
+
+            //if (mina > 0)
+            //{
+            //   fl = false;
+            //   printf("Отрицательных элементов нет\n");
+            //}
+            //else
+            //{
+            //   fl = true;
+            //}
+            //i = 0;
+            //while (i < istart and fl == true)
+            //{
+            //   if (a[i] < 0)
+            //   {
+            //      if (a[i] > mina)
+            //      {
+            //         mina = a[i];
+            //      }
+            //   }
+            //   i++;
+            //}
             //if (fl == true)
             //{
-            //   istart = i;
-            //   printf("\nНомер элемента равный t: %f", istart);
+            //   printf("\nМаксимум %f \n", mina);
             //}
-            //if (fl == false)
-            //{
-            //   printf("\nЧисла равного t нет\n");
-            //   istart = n - 1; // зачем уменьшаем число элементов????
-            //   //istart = n;
-            //}
-            //mina = a[0];
-            //for (int k = 0; k < n; k++)
-            //{
-            //   if (a[k] < mina)
-            //   {
-            //      mina = a[k];
-            //   }
-            //}
+            //delete[] a;
 
 
 
