@@ -108,17 +108,16 @@ namespace Homework_5._1
 
             Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
             int[] outputArray = new int[elements];
-            int i = 0;
-            while (i < elements)
+            int r = 0;
+            while (r < elements)
             {
-               outputArray[i] = sourceArray[i];
-               Console.Write("{0} ", outputArray[i]);
-               i++;
+               outputArray[r] = sourceArray[r];
+               Console.Write("{0} ", outputArray[r]);
+               r++;
             }
 
             Console.WriteLine();
-
-
+            
             double istart, mina;
             bool flag = false;
             istart = outputArray[0];
@@ -137,7 +136,7 @@ namespace Homework_5._1
 
             if (flag == true)
             {
-               istart = i;
+               istart = r;
                Console.WriteLine("Номер элемента равный {0}: {1}", value, istart);
                //printf("\nНомер элемента равный t: %f", istart);
             }
@@ -156,32 +155,34 @@ namespace Homework_5._1
                }
             }
 
-            //if (mina > 0)
-            //{
-            //   fl = false;
-            //   printf("Отрицательных элементов нет\n");
-            //}
-            //else
-            //{
-            //   fl = true;
-            //}
-            //i = 0;
-            //while (i < istart and fl == true)
-            //{
-            //   if (a[i] < 0)
-            //   {
-            //      if (a[i] > mina)
-            //      {
-            //         mina = a[i];
-            //      }
-            //   }
-            //   i++;
-            //}
-            //if (fl == true)
-            //{
-            //   printf("\nМаксимум %f \n", mina);
-            //}
-            //delete[] a;
+            if (mina > 0)
+            {
+               flag = false;
+               Console.WriteLine("Отрицательных элементов нет");
+               //printf("Отрицательных элементов нет\n");
+            }
+            else
+            {
+               flag = true;
+            }
+
+            r = 0;
+            while (r < istart && flag == true)
+            {
+               if (outputArray[r] < 0)
+               {
+                  if (outputArray[r] > mina)
+                  {
+                     mina = outputArray[r];
+                  }
+               }
+               r++;
+            }
+            if (flag == true)
+            {
+               Console.WriteLine("Максимум: {}", mina);
+               //printf("\nМаксимум %f \n", mina);
+            }
 
             //int index = SearchingLastSetValue(searchOne, value);
             //Console.WriteLine(index);
