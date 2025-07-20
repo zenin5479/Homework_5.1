@@ -185,7 +185,6 @@ namespace Homework_5._1
             }
 
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
