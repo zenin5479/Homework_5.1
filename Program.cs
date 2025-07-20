@@ -180,13 +180,22 @@ namespace Homework_5._1
                l++;
             }
 
+            string line = null;
             if (flag == true)
             {
                Console.WriteLine("Максимум: {0}", min);
+               line = "Максимум: " + min;
             }
 
-            string line = min.ToString();
-            LibraryFor1DArray.FileWriteString(line, nameFileInput);
+            //LibraryFor1DArray.FileWriteString(line, nameFileInput);
+            
+            Console.WriteLine("Запись массива строк в файл {0}", nameFileInput);
+            // Создание одномерного массива строк string[] для записи в файл строки
+            string[] stringArray = { line };
+            // Запись массива строк в файл
+            string filePath = AppContext.BaseDirectory + nameFileInput;
+            File.WriteAllLines(filePath, stringArray);
+
          }
 
          Console.ReadKey();
