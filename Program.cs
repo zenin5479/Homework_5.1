@@ -108,41 +108,43 @@ namespace Homework_5._1
 
             Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
             int[] outputArray = new int[elements];
-            int i = 0;
-            while (i < elements)
+            int l = 0;
+            while (l < elements)
             {
-               outputArray[i] = sourceArray[i];
-               Console.Write("{0} ", outputArray[i]);
-               i++;
+               outputArray[l] = sourceArray[l];
+               Console.Write("{0} ", outputArray[l]);
+               l++;
             }
 
             Console.WriteLine();
 
             bool flag = false;
             istart = outputArray[0];
-            int s = outputArray.Length - 1;
-            while (s > -1 && flag == false)
+            int j = outputArray.Length - 1;
+            while (j > -1 && flag == false)
             {
-               if (outputArray[s] == value)
+               if (outputArray[j] == value)
                {
                   flag = true;
                }
                else
                {
-                  s = s - 1;
+                  j = j - 1;
                }
             }
 
             if (flag == true)
             {
-               istart = s;
+               istart = j;
                Console.WriteLine("Номер элемента равный {0}: {1}", value, istart);
             }
+
             if (flag == false)
             {
                Console.WriteLine("Числа равного {0} нет", value);
                istart = outputArray.Length - 1;
             }
+
             mina = outputArray[0];
             for (int k = 0; k < istart; k++)
             {
@@ -151,6 +153,7 @@ namespace Homework_5._1
                   mina = outputArray[k];
                }
             }
+
             if (mina > 0)
             {
                flag = false;
@@ -161,18 +164,19 @@ namespace Homework_5._1
                flag = true;
             }
 
-            i = 0;
-            while (i < istart && flag == true)
+            l = 0;
+            while (l < istart && flag == true)
             {
-               if (outputArray[i] < 0)
+               if (outputArray[l] < 0)
                {
-                  if (outputArray[i] > mina)
+                  if (outputArray[l] > mina)
                   {
-                     mina = outputArray[i];
+                     mina = outputArray[l];
                   }
                }
-               i++;
+               l++;
             }
+
             if (flag == true)
             {
                Console.WriteLine("Максимум: {0}", mina);
