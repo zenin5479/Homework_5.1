@@ -1247,7 +1247,7 @@ namespace Homework_5._1
          string[] stringArray = { line };
          // Запись массива строк в файл
          string filePath = AppContext.BaseDirectory + nameFile;
-         
+
          File.WriteAllLines(filePath, stringArray);
       }
 
