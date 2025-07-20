@@ -43,6 +43,7 @@ namespace Homework_5._1
             }
          } while (elements <= 0 || elements > 20);
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
+         string pathFileInput = Path.GetFullPath(nameFileInput);
          string stroka = null;
          int[] sourceArray = { };
          FileStream filestream = File.Open(pathFileEnter, FileMode.Open, FileAccess.Read);
@@ -119,9 +120,7 @@ namespace Homework_5._1
             }
 
             Console.WriteLine();
-            string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
-
 
             istart = outputArray[0];
             int j = outputArray.Length - 1;
@@ -165,9 +164,7 @@ namespace Homework_5._1
                Console.WriteLine(lines);
                // Создание одномерного массива строк string[] для записи в файл строки
                string[] arrayString = { lines };
-               // Запись массива строк в файл
-               string path = AppContext.BaseDirectory + nameFileInput;
-               File.WriteAllLines(path, arrayString);
+               File.WriteAllLines(pathFileInput, arrayString);
             }
             else
             {
@@ -198,8 +195,7 @@ namespace Homework_5._1
             // Создание одномерного массива строк string[] для записи в файл строки
             string[] stringArray = { line };
             // Запись массива строк в файл
-            string filePath = AppContext.BaseDirectory + nameFileInput;
-            File.WriteAllLines(filePath, stringArray);
+            File.WriteAllLines(pathFileInput, stringArray);
          }
 
          Console.ReadKey();
