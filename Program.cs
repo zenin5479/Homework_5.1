@@ -108,12 +108,12 @@ namespace Homework_5._1
 
             Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
             int[] outputArray = new int[elements];
-            int r = 0;
-            while (r < elements)
+            int i = 0;
+            while (i < elements)
             {
-               outputArray[r] = sourceArray[r];
-               Console.Write("{0} ", outputArray[r]);
-               r++;
+               outputArray[i] = sourceArray[i];
+               Console.Write("{0} ", outputArray[i]);
+               i++;
             }
 
             Console.WriteLine();
@@ -161,17 +161,17 @@ namespace Homework_5._1
                flag = true;
             }
 
-            r = 0;
-            while (r < istart && flag == true)
+            i = 0;
+            while (i < istart && flag == true)
             {
-               if (outputArray[r] < 0)
+               if (outputArray[i] < 0)
                {
-                  if (outputArray[r] > mina)
+                  if (outputArray[i] > mina)
                   {
-                     mina = outputArray[r];
+                     mina = outputArray[i];
                   }
                }
-               r++;
+               i++;
             }
             if (flag == true)
             {
