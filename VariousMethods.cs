@@ -763,6 +763,25 @@ namespace Homework_5._1
          return inputArray;
       }
 
+      public static bool CheckSetValue(int[] inputArray, int setValue)
+      {
+         // Прверка наличия элемента в массиве
+         int i = 0;
+         bool fl = true;
+         while (i < inputArray.Length && fl)
+         {
+            if (inputArray[i] == setValue)
+            {
+               fl = false;
+            }
+            else
+            {
+               i++;
+            }
+         }
+         return fl;
+      }
+
       public static int SearchingLastSetValue(int[] inputArray, int setValue)
       {
          // Поиск элемента строки обход массива с последнего элемента
