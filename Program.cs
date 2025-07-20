@@ -17,7 +17,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value, elements, istart, min, max = 0; ;
+         int value, elements, istart, min; ;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
          do
@@ -171,7 +171,7 @@ namespace Homework_5._1
                {
                   if (outputArray[l] > min)
                   {
-                     max = outputArray[l];
+                     min = outputArray[l];
                   }
                }
                l++;
@@ -179,7 +179,7 @@ namespace Homework_5._1
 
             if (flag == true)
             {
-               Console.WriteLine("Максимум: {0}", max);
+               Console.WriteLine("Максимум: {0}", min);
             }
 
             bool fl = CheckSetValue(sourceArray, value);
