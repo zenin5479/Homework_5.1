@@ -188,9 +188,16 @@ namespace Homework_5._1
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
+         
          Console.ReadKey();
       }
 
-      
+      // Выходные параметры, представленные значением
+      public static int Add(int x, int y, out int a, out int b)
+      {
+         int sum = x + y;
+         x = 10; y = 20; a = 30; b = 40;
+         return sum;
+      }
    }
 }
