@@ -117,6 +117,8 @@ namespace Homework_5._1
             }
 
             Console.WriteLine();
+            string pathFileInput = Path.GetFullPath(nameFileInput);
+            File.Create(pathFileInput).Close();
 
             bool flag = false;
             istart = outputArray[0];
@@ -183,8 +185,7 @@ namespace Homework_5._1
             }
 
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-            string pathFileInput = Path.GetFullPath(nameFileInput);
-            File.Create(pathFileInput).Close();
+
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
