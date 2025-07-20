@@ -19,6 +19,7 @@ namespace Homework_5._1
       {
          int value, elements, istart, min;
          string line = "";
+         bool flag = false;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
          do
@@ -121,7 +122,7 @@ namespace Homework_5._1
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
 
-            bool flag = false;
+
             istart = outputArray[0];
             int j = outputArray.Length - 1;
             while (j > -1 && flag == false)
@@ -136,7 +137,7 @@ namespace Homework_5._1
                }
             }
 
-            if (flag == true)
+            if (flag)
             {
                istart = j;
                Console.WriteLine("Номер элемента равный {0}: {1}", value, istart);
@@ -168,7 +169,7 @@ namespace Homework_5._1
             }
 
             l = 0;
-            while (l < istart && flag == true)
+            while (l < istart && flag)
             {
                if (outputArray[l] < 0)
                {
@@ -181,9 +182,9 @@ namespace Homework_5._1
                l++;
             }
 
-            if (flag == true)
+            if (flag)
             {
-                line = "Максимум: " + min;
+               line = "Максимум: " + min;
                Console.WriteLine(line);
             }
 
