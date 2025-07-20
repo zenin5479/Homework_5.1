@@ -19,6 +19,7 @@ namespace Homework_5._1
       {
          int value, elements, istart, min, max;
          string line = "";
+         string lines = "";
          bool flag = false;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
@@ -160,7 +161,7 @@ namespace Homework_5._1
             if (min > 0)
             {
                flag = false;
-               string lines = "Отрицательных элементов нет";
+               lines = "Отрицательных элементов нет";
                Console.WriteLine(lines);
                // Создание одномерного массива строк string[] для записи в файл строки
                string[] arrayString = { lines };
@@ -190,12 +191,11 @@ namespace Homework_5._1
             {
                line = "Максимум: " + max;
                Console.WriteLine(line);
+               // Создание одномерного массива строк string[] для записи в файл строки
+               string[] stringArray = { line };
+               // Запись массива строк в файл
+               File.WriteAllLines(pathFileInput, stringArray);
             }
-
-            // Создание одномерного массива строк string[] для записи в файл строки
-            string[] stringArray = { line };
-            // Запись массива строк в файл
-            File.WriteAllLines(pathFileInput, stringArray);
          }
 
          Console.ReadKey();
