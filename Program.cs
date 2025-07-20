@@ -17,9 +17,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value, elements, istart, min, max;
-         string line = "";
-         string lines = "";
+         int value, elements;
          bool flag = false;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
@@ -123,7 +121,7 @@ namespace Homework_5._1
             Console.WriteLine();
             File.Create(pathFileInput).Close();
 
-            istart = outputArray[0];
+            int istart = outputArray[0];
             int j = outputArray.Length - 1;
             while (j > -1 && flag == false)
             {
@@ -149,19 +147,22 @@ namespace Homework_5._1
                istart = outputArray.Length - 1;
             }
 
-            min = outputArray[0];
-            for (int k = 0; k < istart; k++)
+            int min = outputArray[0];
+            int k = 0;
+            while (k < istart)
             {
                if (outputArray[k] < min)
                {
                   min = outputArray[k];
                }
+
+               k++;
             }
 
             if (min > 0)
             {
                flag = false;
-               lines = "Отрицательных элементов нет";
+               string lines = "Отрицательных элементов нет";
                Console.WriteLine(lines);
                // Создание одномерного массива строк string[] для записи в файл строки
                string[] arrayString = { lines };
@@ -172,7 +173,7 @@ namespace Homework_5._1
                flag = true;
             }
 
-            max = min;
+            int max = min;
             l = 0;
             while (l < istart && flag)
             {
@@ -189,7 +190,7 @@ namespace Homework_5._1
 
             if (flag)
             {
-               line = "Максимум: " + max;
+               string line = "Максимум: " + max;
                Console.WriteLine(line);
                // Создание одномерного массива строк string[] для записи в файл строки
                string[] stringArray = { line };
