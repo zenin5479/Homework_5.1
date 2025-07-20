@@ -17,7 +17,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value, elements, istart, mina; ;
+         int value, elements, istart, min, max = 0; ;
          string nameFileEnter = "a.txt";
          string nameFileInput = "finish.txt";
          do
@@ -145,16 +145,16 @@ namespace Homework_5._1
                istart = outputArray.Length - 1;
             }
 
-            mina = outputArray[0];
+            min = outputArray[0];
             for (int k = 0; k < istart; k++)
             {
-               if (outputArray[k] < mina)
+               if (outputArray[k] < min)
                {
-                  mina = outputArray[k];
+                  min = outputArray[k];
                }
             }
 
-            if (mina > 0)
+            if (min > 0)
             {
                flag = false;
                Console.WriteLine("Отрицательных элементов нет");
@@ -169,9 +169,9 @@ namespace Homework_5._1
             {
                if (outputArray[l] < 0)
                {
-                  if (outputArray[l] > mina)
+                  if (outputArray[l] > min)
                   {
-                     mina = outputArray[l];
+                     max = outputArray[l];
                   }
                }
                l++;
@@ -179,7 +179,7 @@ namespace Homework_5._1
 
             if (flag == true)
             {
-               Console.WriteLine("Максимум: {0}", mina);
+               Console.WriteLine("Максимум: {0}", max);
             }
 
             bool fl = CheckSetValue(sourceArray, value);
