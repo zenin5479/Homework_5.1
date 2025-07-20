@@ -107,7 +107,7 @@ namespace Homework_5._1
             }
             streamReader.Close();
 
-            Console.WriteLine("Одномерный целочисленный массив для проведения поиска:");
+            Console.WriteLine("Одномерный целочисленный массив:");
             int[] outputArray = new int[elements];
             int l = 0;
             while (l < elements)
