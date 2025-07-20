@@ -1240,6 +1240,17 @@ namespace Homework_5._1
          File.AppendAllLines(filePath, stringArray);
       }
 
+      public static void FileWriteString(string line, string nameFile)
+      {
+         Console.WriteLine("Запись массива строк в файл {0}", nameFile);
+         // Создание одномерного массива строк string[] для записи в файл строки
+         string[] stringArray = { line };
+         // Запись массива строк в файл
+         string filePath = AppContext.BaseDirectory + nameFile;
+         
+         File.WriteAllLines(filePath, stringArray);
+      }
+
       public static void FileWriteArrayString(string[] arrayString, string nameFile)
       {
          // Запись массива строк в файл
