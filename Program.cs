@@ -191,20 +191,6 @@ namespace Homework_5._1
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
-         // Минимальный элемент массива среди отрицательных
-         int min = sourceArray[0];
-         for (int i = 1; i < sourceArray.Length; i++)
-         {
-            if (sourceArray[i] < 0)
-            {
-               if (sourceArray[i] < min)
-               {
-                  min = sourceArray[i];
-               }
-            }
-         }
-         Console.WriteLine("Минимальный элемент массива среди отрицательных: " + min);
-
          // Поиск максимального и минимального элемента строки
          // Cчитаем, что максимум - это первый элемент строки
          double maxOne = sourceArray[0];
