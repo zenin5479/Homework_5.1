@@ -187,7 +187,6 @@ namespace Homework_5._1
                Console.WriteLine(line);
             }
 
-            Console.WriteLine("Запись массива строк в файл {0}", nameFileInput);
             // Создание одномерного массива строк string[] для записи в файл строки
             string[] stringArray = { line };
             // Запись массива строк в файл
