@@ -191,29 +191,6 @@ namespace Homework_5._1
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
-         // Поиск максимального и минимального элемента строки
-         // Cчитаем, что максимум - это первый элемент строки
-         double maxOne = sourceArray[0];
-         // Cчитаем, что минимум - это первый элемент строки
-         double minOne = sourceArray[0];
-         int column = 0;
-         while (column < sourceArray.Length)
-         {
-            if (maxOne < sourceArray[column])
-            {
-               maxOne = sourceArray[column];
-            }
-
-            if (minOne > sourceArray[column])
-            {
-               minOne = sourceArray[column];
-            }
-
-            column++;
-         }
-         Console.WriteLine("Максимум равен: {0}", maxOne);
-         Console.WriteLine("Минимум равен: {0}", minOne);
-
          int x = 1, y = 2, a = 3, b = 4, sum = -1;
          Console.WriteLine("До вызова: x={0}; y ={1}; a ={2}; b ={3}; sum ={4}", x, y, a, b, sum);
          sum = Add(x, y, out a, out b);
