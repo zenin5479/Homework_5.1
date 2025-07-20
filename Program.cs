@@ -178,10 +178,6 @@ namespace Homework_5._1
                Console.WriteLine("Максимум: {0}", mina);
             }
 
-            //int index = SearchingLastSetValue(searchOne, value);
-            //Console.WriteLine(index);
-            //bool fl = SearchingLastValue(searchOne, value);
-            //Console.WriteLine(fl);
             bool fl = CheckSetValue(sourceArray, value);
             Console.WriteLine(fl);
 
