@@ -188,11 +188,6 @@ namespace Homework_5._1
             //LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
          }
 
-         int x = 1, y = 2, a = 3, b = 4, sum = -1;
-         Console.WriteLine("До вызова: x={0}; y ={1}; a ={2}; b ={3}; sum ={4}", x, y, a, b, sum);
-         sum = Add(x, y, out a, out b);
-         Console.WriteLine("После вызова: x={0}; y ={1}; a ={2}; b ={3}; sum ={4}", x, y, a, b, sum);
-
          Console.ReadKey();
       }
 
