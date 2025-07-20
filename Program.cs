@@ -185,8 +185,8 @@ namespace Homework_5._1
                Console.WriteLine("Максимум: {0}", min);
             }
 
-            string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
-            LibraryFor1DArray.FileWriteArrayString(arrayOne, nameFileTwo);
+            string arrayOne = min.ToString();
+            LibraryFor1DArray.FileWriteString(arrayOne, nameFileInput);
          }
 
          Console.ReadKey();
