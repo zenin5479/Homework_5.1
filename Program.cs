@@ -192,7 +192,7 @@ namespace Homework_5._1
       }
 
       // Выходные параметры, представленные значением
-      public static int Add(int x, int y, out int a, out int b)
+      public static void Add(int x, int y, out int a, out int b)
       {
          x = 10; y = 20; a = 30; b = 40;
         
