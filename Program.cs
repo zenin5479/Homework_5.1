@@ -182,9 +182,6 @@ namespace Homework_5._1
                Console.WriteLine("Максимум: {0}", min);
             }
 
-            bool fl = CheckSetValue(sourceArray, value);
-            Console.WriteLine(fl);
-
             //string[] arrayOne = LibraryFor1DArray.OutputStringArrayInt(replacingOne);
             string pathFileInput = Path.GetFullPath(nameFileInput);
             File.Create(pathFileInput).Close();
@@ -205,25 +202,6 @@ namespace Homework_5._1
          int sum = x + y;
          x = 10; y = 20; a = 30; b = 40;
          return sum;
-      }
-
-      public static bool CheckSetValue(int[] inputArray, int setValue)
-      {
-         // Прверка наличия элемента в массиве
-         int i = 0;
-         bool fl = true;
-         while (i < inputArray.Length && fl)
-         {
-            if (inputArray[i] == setValue)
-            {
-               fl = false;
-            }
-            else
-            {
-               i++;
-            }
-         }
-         return fl;
       }
    }
 }
