@@ -17,7 +17,7 @@ namespace Homework_5._1
    {
       static void Main(string[] args)
       {
-         int value, elements, istart, min;
+         int value, elements, istart, min, max;
          string line = "";
          bool flag = false;
          string nameFileEnter = "a.txt";
@@ -161,21 +161,28 @@ namespace Homework_5._1
             if (min > 0)
             {
                flag = false;
-               Console.WriteLine("Отрицательных элементов нет");
+               string lines = "Отрицательных элементов нет";
+               Console.WriteLine(lines);
+               // Создание одномерного массива строк string[] для записи в файл строки
+               string[] arrayString = { lines };
+               // Запись массива строк в файл
+               string path = AppContext.BaseDirectory + nameFileInput;
+               File.WriteAllLines(path, arrayString);
             }
             else
             {
                flag = true;
             }
 
+            max = min;
             l = 0;
             while (l < istart && flag)
             {
                if (outputArray[l] < 0)
                {
-                  if (outputArray[l] > min)
+                  if (outputArray[l] > max)
                   {
-                     min = outputArray[l];
+                     max = outputArray[l];
                   }
                }
 
@@ -184,7 +191,7 @@ namespace Homework_5._1
 
             if (flag)
             {
-               line = "Максимум: " + min;
+               line = "Максимум: " + max;
                Console.WriteLine(line);
             }
 
