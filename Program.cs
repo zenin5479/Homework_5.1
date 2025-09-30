@@ -41,10 +41,12 @@ namespace Homework_5._1
                Console.WriteLine("Введено не верное значение");
             }
          } while (elements <= 0 || elements > 20);
+         
          string pathFileEnter = Path.GetFullPath(nameFileEnter);
          string pathFileInput = Path.GetFullPath(nameFileInput);
          string stroka = null;
          int[] sourceArray = { };
+         
          FileStream filestream = File.Open(pathFileEnter, FileMode.Open, FileAccess.Read);
          if (filestream == null || filestream.Length == 0)
          {
@@ -57,9 +59,11 @@ namespace Homework_5._1
             {
                stroka = streamReader.ReadLine();
             }
+
             char symbolSpace = ' ';
             int symbolСount = 0;
             int сolumn = 0;
+
             if (stroka != null)
             {
                while (symbolСount < stroka.Length)
